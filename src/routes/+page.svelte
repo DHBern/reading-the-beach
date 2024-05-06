@@ -16,5 +16,5 @@
 	>
 		Launch Documentation
 	</a>
-	<i class="fa-solid fa-user"></i>
+	<i class="fa-solid fa-info"></i>
 </SidebarLayout>
