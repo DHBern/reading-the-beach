@@ -2,7 +2,7 @@ import { join } from 'path'
 import type { Config } from 'tailwindcss'
 import typography from '@tailwindcss/typography';
 import { skeleton } from '@skeletonlabs/tw-plugin';
-import { beaches } from './src/beaches'
+import { beach } from './src/beach'
 
 export default {
 	darkMode: 'class',
@@ -16,12 +16,12 @@ export default {
 			themes: {
 				preset: [
 					{
-						name: 'custom',
+						name: 'skeleton',
 						enhancements: true,
 					},
 				],
 				custom: [
-					beaches,
+					beach,
 				],
 			},
 		}),
