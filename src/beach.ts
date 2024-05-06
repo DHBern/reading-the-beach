@@ -1,6 +1,22 @@
 import type { CustomThemeConfig } from '@skeletonlabs/tw-plugin';
 
-export const beach: CustomThemeConfig = {
+type QuarternaryConfig = CustomThemeConfig & {
+	properties: {
+		'--on-quarternary': string;
+		'--color-quarternary-50': string;
+		'--color-quarternary-100': string;
+		'--color-quarternary-200': string;
+		'--color-quarternary-300': string;
+		'--color-quarternary-400': string;
+		'--color-quarternary-500': string;
+		'--color-quarternary-600': string;
+		'--color-quarternary-700': string;
+		'--color-quarternary-800': string;
+		'--color-quarternary-900': string;
+	};
+};
+
+export const beach: QuarternaryConfig = {
 	name: 'beach',
 	properties: {
 		// =~= Theme Properties =~=
@@ -15,6 +31,7 @@ export const beach: CustomThemeConfig = {
 		'--on-primary': 'var(--color-surface-500)',
 		'--on-secondary': 'var(--color-surface-500)',
 		'--on-tertiary': 'var(--color-surface-700)',
+		'--on-quarternary': 'var(--color-surface-700)',
 		'--on-success': '0 0 0',
 		'--on-warning': '0 0 0',
 		'--on-error': '255 255 255',
@@ -53,6 +70,17 @@ export const beach: CustomThemeConfig = {
 		'--color-tertiary-700': '38 127 106', // #267f6a
 		'--color-tertiary-800': '30 101 85', // #1e6555
 		'--color-tertiary-900': '25 83 69', // #195345
+		// quarternary | #e498b1
+		'--color-quarternary-50': '251 240 243', // #fbf0f3
+		'--color-quarternary-100': '250 234 239', // #faeaef
+		'--color-quarternary-200': '248 229 236', // #f8e5ec
+		'--color-quarternary-300': '244 214 224', // #f4d6e0
+		'--color-quarternary-400': '236 183 200', // #ecb7c8
+		'--color-quarternary-500': '228 152 177', // #e498b1
+		'--color-quarternary-600': '205 137 159', // #cd899f
+		'--color-quarternary-700': '171 114 133', // #ab7285
+		'--color-quarternary-800': '137 91 106', // #895b6a
+		'--color-quarternary-900': '112 74 87', // #704a57
 		// success | #84cc16
 		'--color-success-50': '237 247 220', // #edf7dc
 		'--color-success-100': '230 245 208', // #e6f5d0
