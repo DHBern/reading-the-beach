@@ -77,7 +77,7 @@
 				</li>
 			</ul>
 		</section>
-		<Accordion class="mt-6 fill-primary-500">
+		<Accordion class="mt-6 fill-primary-500 sm:col-span-2">
 			<AccordionItem>
 				<svelte:fragment slot="summary">About this project</svelte:fragment>
 				<svelte:fragment slot="content">

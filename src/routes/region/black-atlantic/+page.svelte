@@ -9,7 +9,7 @@
 		<h2>Black Atlantic</h2>
 		<p>Explore the Black Atlantic</p>
 		<section>
-			<title> explore more regions</title>
+			<h3 class="h3">explore more regions</h3>
 			<ul>
 				<li>
 					<a href="{base}/region/mediterranean" class="btn variant-filled-tertiary">Mediterranean</a
