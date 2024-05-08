@@ -8,7 +8,6 @@
 
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
-		<h1><a href={base}>The Beach Atlas</a></h1>
 		<p>A Literary Atlas of the Beach in the Long 20th Century</p>
 		<i class="fa-solid fa-info"></i>
 		<section>

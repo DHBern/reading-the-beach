@@ -5,7 +5,6 @@
 
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
-		<h1><a href="{base}/">The Beach Atlas</a></h1>
 		<a class="btn variant-filled" href="{base}/">main map</a>
 		<h2>Black Atlantic</h2>
 		<p>Explore the Black Atlantic</p>
