@@ -4,14 +4,42 @@
 	import MapImage from '$lib/Worldmap-Base.png?enhanced';
 	//@ts-ignore
 	import dimensions from '$lib/Worldmap-Base.png?as=meta:height;width';
+	import { getModalStore } from '@skeletonlabs/skeleton';
+	import type { ModalSettings } from '@skeletonlabs/skeleton';
+
+	const modalStore = getModalStore();
+
+	const info: ModalSettings = {
+		type: 'alert',
+		// Data
+		title: 'How to read the Beach Atlas',
+		body: `
+		<h2>Explore by regions</h2>
+        These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and, in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged as a site where its effects have become most dramatically visible.
+        This project seeks to redress this neglect, reclaiming the beach as a central space of modernity and postmodernity: <span class="badge variant-filled-secondary">Black Atlantic</span>, <span class="badge variant-filled-tertiary">Mediterranean</span>, <span class="badge bg-quarternary-500 text-surface-700">Northern Sea</span>
+        <br><br>
+      <h2>Explore by topic</h2>
+        These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and, in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged as a site where its effects have become most dramatically visible.
+        One of the aims of this project is to produce an interactive online literary atlas of beach narratives, making our research accessible to a wider public: <span class="badge variant-filled">death</span>, <span class="badge variant-filled">leisure</span>, <span class="badge variant-filled">migration and exile</span>, <span class="badge variant-filled"> myth</span>, <span class="badge variant-filled"> pollution</span>
+        <br><br>
+      <h2>About the dataset</h2>
+        These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and, in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged as a site where its effects have become most dramatically visible.
+        This project seeks to redress this neglect, reclaiming the beach as a central space of modernity and postmodernity. We will approach the beach from the perspectives of postcolonial studies, ecocriticism and new materialism. One of the aims of this project is to produce an interactive online literary atlas of beach narratives, making our research accessible to a wider public.
+		`,
+		buttonTextCancel: 'Close'
+	};
 </script>
 
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
 		<p>A Literary Atlas of the Beach in the Long 20th Century</p>
-		<button type="button" class="btn-icon variant-filled mt-3"
-			><i class="fa-solid fa-info"></i></button
+		<button
+			type="button"
+			class="btn-icon variant-filled mt-3"
+			on:click={() => modalStore.trigger(info)}
 		>
+			<i class="fa-solid fa-info"></i>
+		</button>
 		<section class="mt-6">
 			<h2 class="h2 my-4">explore by region</h2>
 			<ul>
@@ -77,3 +105,9 @@
 		</svg>
 	</div>
 </SidebarLayout>
+
+<style>
+	:global(.modal article) {
+		@apply overflow-y-scroll max-h-[65vh];
+	}
+</style>
