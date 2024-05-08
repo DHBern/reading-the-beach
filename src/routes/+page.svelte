@@ -108,14 +108,15 @@
 		</Accordion>
 	</svelte:fragment>
 	<div class="grid">
-		<div class="row-span-full col-span-full">
-			<enhanced:img src={MapImage} />
+		<div class="row-span-full col-span-full h-screen">
+			<enhanced:img src={MapImage} class="h-full object-cover" />
 		</div>
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 {dimensions.width} {dimensions.height}"
+			preserveAspectRatio="xMidYMid slice"
 			id="map"
-			class="row-span-full col-span-full"
+			class="row-span-full col-span-full h-screen w-full"
 		>
 			<a href="{base}/region/black-atlantic">
 				<polygon
