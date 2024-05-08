@@ -12,11 +12,12 @@
 			<title> explore more regions</title>
 			<ul>
 				<li>
-					<a href="{base}/mediterranean" class="btn variant-filled-tertiary">Mediterranean</a>
+					<a href="{base}/region/mediterranean" class="btn variant-filled-tertiary">Mediterranean</a
+					>
 				</li>
 				<li>
 					<a
-						href="{base}/north-sea"
+						href="{base}/region/northern-sea"
 						class="btn bg-quarternary-500 text-surface-700 hover:bg-surface-700 hover:text-quarternary-500"
 						>Northern Sea</a
 					>
