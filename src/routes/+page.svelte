@@ -9,9 +9,11 @@
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
 		<p>A Literary Atlas of the Beach in the Long 20th Century</p>
-		<i class="fa-solid fa-info"></i>
-		<section>
-			<title>explore by region</title>
+		<button type="button" class="btn-icon variant-filled mt-3"
+			><i class="fa-solid fa-info"></i></button
+		>
+		<section class="mt-6">
+			<h2 class="h2 my-4">explore by region</h2>
 			<ul>
 				<li>
 					<a href="{base}/region/black-atlantic" class="btn variant-filled-secondary"
@@ -32,8 +34,8 @@
 				</li>
 			</ul>
 		</section>
-		<section>
-			<title>explore by topic</title>
+		<section class="mt-6">
+			<h2 class="h2 my-4">explore by topic</h2>
 			<ul>
 				<li><a href="{base}/topic/death" class="btn variant-ringed">death</a></li>
 				<li><a href="{base}/topic/leisure" class="btn variant-ringed">leisure</a></li>
@@ -42,7 +44,7 @@
 				<li><a href="{base}/topic/pollution" class="btn variant-ringed">pollution</a></li>
 			</ul>
 		</section>
-		<button>About this project</button>
+		<button class="btn variant-filled mt-6">About this project</button>
 	</svelte:fragment>
 	<div class="grid">
 		<div class="row-span-full col-span-full">
@@ -74,5 +76,4 @@
 			>
 		</svg>
 	</div>
-	test
 </SidebarLayout>
