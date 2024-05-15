@@ -22,10 +22,19 @@
 						{@html $modalStore[0]?.meta?.tabs?.[tabSet]?.content}
 					{/if}
 					{#if $modalStore[0]?.meta?.tabs?.[tabSet]?.bars}
-						<dl class="grid">
+						<dl class="grid grid-cols-2">
 							{#each $modalStore[0]?.meta?.tabs?.[tabSet]?.bars || [] as bar}
 								<dt class="text-sm font-bold">{bar.label}</dt>
-								<dd class="text-sm">{bar.value}</dd>
+								<dd class="text-sm">
+									<svg
+										viewBox="0 0 {(20 + 10) *
+											Math.max($modalStore[0]?.meta?.tabs?.[tabSet]?.bars.map((b) => b.value))} 100"
+									>
+										{#each { length: bar.value } as _, i}
+											<rect x={30 * i} width="20" height="100" fill="currentColor"></rect>
+										{/each}
+									</svg>
+								</dd>
 							{/each}
 						</dl>
 					{/if}
