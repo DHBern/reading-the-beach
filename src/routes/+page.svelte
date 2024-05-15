@@ -54,6 +54,57 @@ and morbid.</p>`
 			]
 		}
 	};
+
+	const northernInfo: ModalSettings = {
+		type: 'component',
+		component: 'info',
+		title: 'Northern Sea',
+		meta: {
+			region: 'northern-sea',
+			btnClasses:
+				'btn bg-quarternary-500 text-surface-700 hover:bg-surface-700 hover:text-quarternary-500',
+			tabs: [
+				{
+					name: 'mood',
+					label: 'Mood',
+					content: `<p>This is the Northern Sea region. This region encompasses texts that are set in countries
+bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
+Norwegian
+Sea. For this region, some clear results have been identified. The materiality
+of the beaches in these texts are often rocky, shingles, fossils, driftwood
+and plastic.
+The mood is also characterised
+by being contemplative, curious,
+and morbid.</p>`
+				}
+			]
+		}
+	};
+
+	const mediterraneanInfo: ModalSettings = {
+		type: 'component',
+		component: 'info',
+		title: 'Mediterranean',
+		meta: {
+			region: 'mediterranean',
+			btnClasses: 'btn variant-filled-tertiary',
+			tabs: [
+				{
+					name: 'mood',
+					label: 'Mood',
+					content: `<p>This is the Northern Sea region. This region encompasses texts that are set in countries
+bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
+Norwegian
+Sea. For this region, some clear results have been identified. The materiality
+of the beaches in these texts are often rocky, shingles, fossils, driftwood
+and plastic.
+The mood is also characterised
+by being contemplative, curious,
+and morbid.</p>`
+				}
+			]
+		}
+	};
 	let svg: SVGElement;
 </script>
 
@@ -175,7 +226,7 @@ and morbid.</p>`
 			</a>
 			<foreignObject x="2300" y="1650" width="800" height="500">
 				{#if svg?.clientWidth}<button
-						on:click={() => modalStore.trigger(atlanticInfo)}
+						on:click={() => modalStore.trigger(mediterraneanInfo)}
 						class="btn variant-filled-tertiary origin-top-left"
 						style="transform: scale(calc(1 / var(--scaling)));"
 					>
@@ -190,7 +241,7 @@ and morbid.</p>`
 			</a>
 			<foreignObject x="1800" y="1400" width="800" height="500">
 				{#if svg?.clientWidth}<button
-						on:click={() => modalStore.trigger(atlanticInfo)}
+						on:click={() => modalStore.trigger(northernInfo)}
 						class="btn bg-quarternary-500 text-surface-700 hover:bg-surface-700 hover:text-quarternary-500 origin-top-left"
 						style="transform: scale(calc(1 / var(--scaling)));"
 					>
