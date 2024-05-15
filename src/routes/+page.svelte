@@ -50,6 +50,24 @@ and plastic.
 The mood is also characterised
 by being contemplative, curious,
 and morbid.</p>`
+				},
+				{
+					name: 'event',
+					label: 'Event',
+					bars: [
+						{
+							label: 'Contemplative',
+							value: 9
+						},
+						{
+							label: 'Morbid',
+							value: 5
+						},
+						{
+							label: 'Curious',
+							value: 3
+						}
+					]
 				}
 			]
 		}

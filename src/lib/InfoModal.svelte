@@ -18,7 +18,17 @@
 					<Tab bind:group={tabSet} name={tab.name} value={i}>{tab.label}</Tab>
 				{/each}
 				<svelte:fragment slot="panel">
-					{@html $modalStore[0]?.meta?.tabs?.[tabSet]?.content}
+					{#if $modalStore[0]?.meta?.tabs?.[tabSet]?.content}
+						{@html $modalStore[0]?.meta?.tabs?.[tabSet]?.content}
+					{/if}
+					{#if $modalStore[0]?.meta?.tabs?.[tabSet]?.bars}
+						<dl class="grid">
+							{#each $modalStore[0]?.meta?.tabs?.[tabSet]?.bars || [] as bar}
+								<dt class="text-sm font-bold">{bar.label}</dt>
+								<dd class="text-sm">{bar.value}</dd>
+							{/each}
+						</dl>
+					{/if}
 				</svelte:fragment>
 			</TabGroup>
 			<a
