@@ -176,7 +176,7 @@ and morbid.</p>`
 				</li>
 			</ul>
 		</section>
-		<Accordion class="mt-6 fill-primary-500 sm:col-span-2">
+		<Accordion class="mt-6 fill-primary-500 @[320px]:col-span-2 overflow-scroll">
 			<AccordionItem>
 				<svelte:fragment slot="summary">About this project</svelte:fragment>
 				<svelte:fragment slot="content">
