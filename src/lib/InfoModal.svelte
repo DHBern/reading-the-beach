@@ -24,15 +24,20 @@
 						{@html currentTab?.content}
 					{/if}
 					{#if currentTab?.bars}
-						<dl class="grid grid-cols-2 h-fit">
+						<dl class="grid grid-cols-[200px_1fr] gap-2 place-items-baseline">
 							{#each currentTab?.bars || [] as bar}
-								{@const barwidth = 30}
+								{@const barwidth = 20}
 								{@const gap = 5}
 								<dt class="text-sm font-bold">{bar.label}</dt>
 								<dd class="text-sm">
 									<svg
-										viewBox="0 0 {(barwidth + gap) * 30} 50"
+										viewBox="0 0 {(barwidth + gap) *
+											Math.max.apply(
+												null,
+												currentTab?.bars.map((b) => b.value)
+											)} 50"
 										style="color: rgba(var(--color-{$modalStore[0]?.meta?.color}) / 1)"
+										class="max-h-full max-w-full h-12"
 									>
 										{#each { length: bar.value } as _, i}
 											<rect
@@ -44,6 +49,7 @@
 										{/each}
 									</svg>
 								</dd>
+								<hr class="col-span-full w-full !border-t-2" />
 							{/each}
 						</dl>
 					{/if}
@@ -51,7 +57,7 @@
 			</TabGroup>
 			<a
 				href="{base}/region/{$modalStore[0].meta.region}"
-				class="{$modalStore[0].meta.btnClasses} self-center"
+				class="{$modalStore[0].meta.btnClasses} self-center mt-5"
 				on:click={() => modalStore.close()}
 			>
 				Enter region
