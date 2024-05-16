@@ -28,10 +28,10 @@ export const beach: QuarternaryConfig = {
 		'--theme-rounded-container': '8px',
 		'--theme-border-base': '1px',
 		// =~= Theme On-X Colors =~=
-		'--on-primary': 'var(--color-surface-500)',
-		'--on-secondary': 'var(--color-surface-500)',
-		'--on-tertiary': 'var(--color-surface-700)',
-		'--on-quarternary': 'var(--color-surface-700)',
+		'--on-primary': 'var(--color-surface-900)',
+		'--on-secondary': 'var(--color-surface-900)',
+		'--on-tertiary': 'var(--color-surface-900)',
+		'--on-quarternary': 'var(--color-surface-900)',
 		'--on-success': '0 0 0',
 		'--on-warning': '0 0 0',
 		'--on-error': '255 255 255',
@@ -115,15 +115,15 @@ export const beach: QuarternaryConfig = {
 		'--color-error-800': '127 15 71', // #7f0f47
 		'--color-error-900': '104 12 58', // #680c3a
 		// surface | #043854
-		'--color-surface-50': '217 225 229', // #d9e1e5
-		'--color-surface-100': '205 215 221', // #cdd7dd
-		'--color-surface-200': '192 205 212', // #c0cdd4
-		'--color-surface-300': '155 175 187', // #9bafbb
-		'--color-surface-400': '79 116 135', // #4f7487
-		'--color-surface-500': '4 56 84', // #043854
-		'--color-surface-600': '4 50 76', // #04324c
-		'--color-surface-700': '3 42 63', // #032a3f
-		'--color-surface-800': '2 34 50', // #022232
-		'--color-surface-900': '2 27 41' // #021b29
+		'--color-surface-50': '245 251 255', // #F5FBFF
+		'--color-surface-100': '226 244 254', // #E2F4FE
+		'--color-surface-200': '201 235 252', // #C9EBFC
+		'--color-surface-300': '172 223 251', // #ACDFFB
+		'--color-surface-400': '133 209 249', // #85D1F9
+		'--color-surface-500': '85 190 247', // #55BEF7
+		'--color-surface-600': '31 170 244', // #1FAAF4
+		'--color-surface-700': '10 143 214', // #0A8FD6
+		'--color-surface-800': '8 110 166', // #086EA6
+		'--color-surface-900': '4 56 84' // #043854
 	}
 };

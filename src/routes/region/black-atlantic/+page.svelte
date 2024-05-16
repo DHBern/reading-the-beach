@@ -12,7 +12,10 @@
 			<h3 class="h3">explore more regions</h3>
 			<ul>
 				<li>
-					<a href="{base}/region/mediterranean" class="btn variant-filled-tertiary">Mediterranean</a
+					<a
+						href="{base}/region/mediterranean"
+						class="btn border bg-tertiary-500 text-surface-900 hover:bg-surface-900 hover:text-tertiary-500 hover:filter-none"
+						>Mediterranean</a
 					>
 				</li>
 				<li>
