@@ -4,9 +4,9 @@
 	import MapImage from '$lib/Worldmap-Base.png?enhanced';
 	//@ts-ignore
 	import dimensions from '$lib/Worldmap-Base.png?as=meta:height;width';
-	import { getModalStore } from '@skeletonlabs/skeleton';
-	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
+	import { getModalStore, Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 	import type { ModalSettings } from '@skeletonlabs/skeleton';
+	import { onMount } from 'svelte';
 
 	const modalStore = getModalStore();
 
@@ -17,7 +17,7 @@
 		body: `
 		<h2>Explore by regions</h2>
         These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and, in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged as a site where its effects have become most dramatically visible.
-        This project seeks to redress this neglect, reclaiming the beach as a central space of modernity and postmodernity: <span class="badge variant-filled-secondary">Black Atlantic</span>, <span class="badge variant-filled-tertiary">Mediterranean</span>, <span class="badge bg-quarternary-500 text-surface-700">Northern Sea</span>
+        This project seeks to redress this neglect, reclaiming the beach as a central space of modernity and postmodernity: <span class="badge variant-filled-secondary">Black Atlantic</span>, <span class="badge variant-filled-tertiary">Mediterranean</span>, <span class="badge bg-quarternary-500 text-surface-900">Northern Sea</span>
         <br><br>
       <h2>Explore by topic</h2>
         These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and, in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged as a site where its effects have become most dramatically visible.
@@ -44,14 +44,14 @@
 					name: 'mood',
 					label: 'Mood',
 					content: `<p>This is the Northern Sea region. This region encompasses texts that are set in countries
-bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
-Norwegian
-Sea. For this region, some clear results have been identified. The materiality
-of the beaches in these texts are often rocky, shingles, fossils, driftwood
-and plastic.
-The mood is also characterised
-by being contemplative, curious,
-and morbid.</p>`
+								bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
+								Norwegian
+								Sea. For this region, some clear results have been identified. The materiality
+								of the beaches in these texts are often rocky, shingles, fossils, driftwood
+								and plastic.
+								The mood is also characterised
+								by being contemplative, curious,
+								and morbid.</p>`
 				},
 				{
 					name: 'event',
@@ -82,7 +82,7 @@ and morbid.</p>`
 		meta: {
 			region: 'northern-sea',
 			btnClasses:
-				'btn bg-quarternary-500 text-surface-700 hover:bg-surface-700 hover:text-quarternary-500',
+				'btn bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500',
 			color: 'quarternary-500',
 			tabs: [
 				{
@@ -116,19 +116,28 @@ and morbid.</p>`
 					name: 'mood',
 					label: 'Mood',
 					content: `<p>This is the Northern Sea region. This region encompasses texts that are set in countries
-bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
-Norwegian
-Sea. For this region, some clear results have been identified. The materiality
-of the beaches in these texts are often rocky, shingles, fossils, driftwood
-and plastic.
-The mood is also characterised
-by being contemplative, curious,
-and morbid.</p>`
+								bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
+								Norwegian
+								Sea. For this region, some clear results have been identified. The materiality
+								of the beaches in these texts are often rocky, shingles, fossils, driftwood
+								and plastic.
+								The mood is also characterised
+								by being contemplative, curious,
+								and morbid.</p>`
 				}
 			]
 		}
 	};
 	let svg: SVGElement;
+
+	onMount(() => {
+		//check whether the cookie is set. if not, show the modal
+		if (!document.cookie.includes('showInfoModal')) {
+			modalStore.trigger(info);
+			//set the cookie to expire in 6 months
+			document.cookie = 'showInfoModal=true; max-age=15552000';
+		}
+	});
 </script>
 
 <svelte:window on:resize={() => (svg = svg)} />

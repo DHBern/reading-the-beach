@@ -21,7 +21,7 @@
 				<li>
 					<a
 						href="{base}/region/northern-sea"
-						class="btn bg-quarternary-500 text-surface-700 hover:bg-surface-700 hover:text-quarternary-500"
+						class="btn bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500"
 						>Northern Sea</a
 					>
 				</li>
