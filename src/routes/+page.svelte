@@ -37,6 +37,7 @@
 		meta: {
 			region: 'black-atlantic',
 			btnClasses: 'btn variant-filled-secondary',
+			color: 'secondary-500',
 			tabs: [
 				{
 					name: 'mood',
@@ -81,6 +82,7 @@ and morbid.</p>`
 			region: 'northern-sea',
 			btnClasses:
 				'btn bg-quarternary-500 text-surface-700 hover:bg-surface-700 hover:text-quarternary-500',
+			color: 'quarternary-500',
 			tabs: [
 				{
 					name: 'mood',
@@ -106,6 +108,7 @@ and morbid.</p>`
 		meta: {
 			region: 'mediterranean',
 			btnClasses: 'btn variant-filled-tertiary',
+			color: 'tertiary-500',
 			tabs: [
 				{
 					name: 'mood',
