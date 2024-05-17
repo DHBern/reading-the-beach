@@ -179,7 +179,7 @@ and morbid.</p>`
 				</li>
 			</ul>
 		</section>
-		<section class="mt-2 lg:mt-6">
+		<section class="mt-2 lg:mt-6 flex-grow">
 			<h2 class="h2 my-2 lg:my-4">explore by topic</h2>
 			<ul>
 				<li class="my-2"><a href="{base}/topic/death" class="btn variant-ringed">death</a></li>
