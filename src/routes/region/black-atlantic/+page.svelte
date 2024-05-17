@@ -43,7 +43,7 @@
 		<section class="my-4 @[600px]:my-0 @[600px]:col-start-2 @[600px]:justify-self-end">
 			<h2 class="h3">explore more regions</h2>
 			<ul>
-				<li class="mt-2 text-right">
+				<li class="mt-2 text-right lg:text-left">
 					<a
 						href="{base}/region/mediterranean"
 						class="btn border bg-tertiary-500 text-surface-900 hover:bg-surface-900 hover:text-tertiary-500 hover:filter-none"
