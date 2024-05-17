@@ -82,7 +82,7 @@
 		meta: {
 			region: 'northern-sea',
 			btnClasses:
-				'btn bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500',
+				'btn border bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500',
 			color: 'quarternary-500',
 			tabs: [
 				{

@@ -5,23 +5,55 @@
 
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
-		<a class="btn variant-filled" href="{base}/">main map</a>
-		<h2>Black Atlantic</h2>
-		<p>Explore the Black Atlantic</p>
-		<section>
-			<h3 class="h3">explore more regions</h3>
+		<a
+			class="btn btn-sm w-fit mt-2 border bg-primary-500 text-surface-900 hover:bg-surface-900 hover:text-primary-500 hover:filter-none"
+			href="{base}/"><span><i class="fa-solid fa-arrow-left"></i></span><span>main map</span></a
+		>
+		<section class="overflow-scroll">
+			<h2 class="h3 mt-4 mb-2">Black Atlantic</h2>
+			<p>
+				These literary representations reflect the importance of the beach in everyday culture, as a
+				vacation site, a contact zone, a site of capitalist production and, in recent years, an
+				arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of
+				global warming, the littoral ecotone has also emerged as a site where its effects have
+				become most dramatically visible.
+			</p>
+			<p>
+				These literary representations reflect the importance of the beach in everyday culture, as a
+				vacation site, a contact zone, a site of capitalist production and, in recent years, an
+				arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of
+				global warming, the littoral ecotone has also emerged as a site where its effects have
+				become most dramatically visible.
+			</p>
+			<p>
+				These literary representations reflect the importance of the beach in everyday culture, as a
+				vacation site, a contact zone, a site of capitalist production and, in recent years, an
+				arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of
+				global warming, the littoral ecotone has also emerged as a site where its effects have
+				become most dramatically visible.
+			</p>
+			<p>
+				These literary representations reflect the importance of the beach in everyday culture, as a
+				vacation site, a contact zone, a site of capitalist production and, in recent years, an
+				arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of
+				global warming, the littoral ecotone has also emerged as a site where its effects have
+				become most dramatically visible.
+			</p>
+		</section>
+		<section class="my-4">
+			<h2 class="h3">explore more regions</h2>
 			<ul>
-				<li>
+				<li class="mt-2">
 					<a
 						href="{base}/region/mediterranean"
 						class="btn border bg-tertiary-500 text-surface-900 hover:bg-surface-900 hover:text-tertiary-500 hover:filter-none"
 						>Mediterranean</a
 					>
 				</li>
-				<li>
+				<li class="mt-2">
 					<a
 						href="{base}/region/northern-sea"
-						class="btn bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500"
+						class="btn border bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500"
 						>Northern Sea</a
 					>
 				</li>
@@ -32,7 +64,7 @@
 		title="Black Atlantic map"
 		src="https://nodegoat.unibe.ch/viewer.p/34/2703/scenario/5/geo/fullscreen"
 		width="100%"
-		height="auto"
+		height="100%"
 	>
 	</iframe>
 </SidebarLayout>
