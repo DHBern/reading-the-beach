@@ -8,14 +8,14 @@
 </script>
 
 <div
-	class="modal block overflow-y-auto bg-surface-100-800-token w-modal h-auto p-4 space-y-4 rounded-container-token shadow-xl"
+	class="modal block overflow-y-auto bg-surface-900 w-modal h-auto p-4 space-y-4 rounded-container-token shadow-xl"
 >
 	{#if $modalStore[0]}
 		{@const tabs = $modalStore[0]?.meta?.tabs}
 		{@const currentTab = tabs?.[tabSet]}
 		<header class="modal-header text-2xl font-bold">{$modalStore[0].title}</header>
 		<article class="modal-body overflow-hidden flex flex-col">
-			<TabGroup>
+			<TabGroup border="border-b border-primary-500">
 				{#each tabs || [] as tab, i}
 					<Tab bind:group={tabSet} name={tab.name} value={i}>{tab.label}</Tab>
 				{/each}
@@ -49,7 +49,7 @@
 										{/each}
 									</svg>
 								</dd>
-								<hr class="col-span-full w-full !border-t-2" />
+								<hr class="col-span-full w-full !border-primary-500" />
 							{/each}
 						</dl>
 					{/if}

@@ -17,11 +17,11 @@
 		body: `
 		<h2>Explore by regions</h2>
         These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and, in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged as a site where its effects have become most dramatically visible.
-        This project seeks to redress this neglect, reclaiming the beach as a central space of modernity and postmodernity: <span class="badge variant-filled-secondary">Black Atlantic</span>, <span class="badge variant-filled-tertiary">Mediterranean</span>, <span class="badge bg-quarternary-500 text-surface-900">Northern Sea</span>
+        This project seeks to redress this neglect, reclaiming the beach as a central space of modernity and postmodernity: <a href="${base}/region/black-atlantic" class="badge variant-filled-secondary hover:!text-secondary-500 hover:!bg-surface-900">Black Atlantic</a>, <a href="${base}/region/mediterranean"  class="badge variant-filled-tertiary hover:!text-tertiary-500 hover:!bg-surface-900">Mediterranean</a>, <a href="${base}/region/northern-sea" class="badge bg-quarternary-500 text-surface-900  hover:!text-quarternary-500 hover:!bg-surface-900">Northern Sea</a>
         <br><br>
       <h2>Explore by topic</h2>
         These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and, in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged as a site where its effects have become most dramatically visible.
-        One of the aims of this project is to produce an interactive online literary atlas of beach narratives, making our research accessible to a wider public: <span class="badge variant-filled">death</span>, <span class="badge variant-filled">leisure</span>, <span class="badge variant-filled">migration and exile</span>, <span class="badge variant-filled"> myth</span>, <span class="badge variant-filled"> pollution</span>
+        One of the aims of this project is to produce an interactive online literary atlas of beach narratives, making our research accessible to a wider public: <a href="${base}/topic/death" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">death</a>, <a class="badge variant-filled">leisure</a>, <a class="badge variant-filled">migration and exile</a>, <a class="badge variant-filled"> myth</a>, <a class="badge variant-filled"> pollution</a>
         <br><br>
       <h2>About the dataset</h2>
         These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and, in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged as a site where its effects have become most dramatically visible.
@@ -146,13 +146,13 @@ and morbid.</p>`
 		<p>A Literary Atlas of the Beach in the Long 20th Century</p>
 		<button
 			type="button"
-			class="btn-icon variant-filled mt-3"
+			class="btn-icon mt-3 bg-primary-500 text-surface-900 hover:bg-surface-900 hover:text-primary-500 hover:filter-none border"
 			on:click={() => modalStore.trigger(info)}
 		>
 			<i class="fa-solid fa-info"></i>
 		</button>
 		<section class="mt-2 lg:mt-6">
-			<h2 class="h2 my-2 lg:my-4">explore by region</h2>
+			<h2 class="h3 my-4">explore by region</h2>
 			<ul>
 				<li class="my-2">
 					<a
@@ -180,16 +180,42 @@ and morbid.</p>`
 			</ul>
 		</section>
 		<section class="mt-2 lg:mt-6 flex-grow">
-			<h2 class="h2 my-2 lg:my-4">explore by topic</h2>
+			<h2 class="h3 my-4">explore by topic</h2>
 			<ul>
-				<li class="my-2"><a href="{base}/topic/death" class="btn variant-ringed">death</a></li>
-				<li class="my-2"><a href="{base}/topic/leisure" class="btn variant-ringed">leisure</a></li>
 				<li class="my-2">
-					<a href="{base}/topic/migration" class="btn variant-ringed">migration and exile</a>
+					<a
+						href="{base}/topic/death"
+						class="btn bg-surface-900 text-primary-500 border hover:bg-primary-500 hover:text-surface-900"
+						>death</a
+					>
 				</li>
-				<li class="my-2"><a href="{base}/topic/myth" class="btn variant-ringed">myth</a></li>
 				<li class="my-2">
-					<a href="{base}/topic/pollution" class="btn variant-ringed">pollution</a>
+					<a
+						href="{base}/topic/leisure"
+						class="btn bg-surface-900 text-primary-500 border hover:bg-primary-500 hover:text-surface-900"
+						>leisure</a
+					>
+				</li>
+				<li class="my-2">
+					<a
+						href="{base}/topic/migration"
+						class="btn bg-surface-900 text-primary-500 border hover:bg-primary-500 hover:text-surface-900"
+						>migration and exile</a
+					>
+				</li>
+				<li class="my-2">
+					<a
+						href="{base}/topic/myth"
+						class="btn bg-surface-900 text-primary-500 border hover:bg-primary-500 hover:text-surface-900"
+						>myth</a
+					>
+				</li>
+				<li class="my-2">
+					<a
+						href="{base}/topic/pollution"
+						class="btn bg-surface-900 text-primary-500 border hover:bg-primary-500 hover:text-surface-900"
+						>pollution</a
+					>
 				</li>
 			</ul>
 		</section>

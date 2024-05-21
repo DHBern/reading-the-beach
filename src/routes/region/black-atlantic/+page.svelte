@@ -50,7 +50,7 @@
 						>Mediterranean</a
 					>
 				</li>
-				<li class="mt-2 text-right">
+				<li class="mt-2 text-right lg:text-left">
 					<a
 						href="{base}/region/northern-sea"
 						class="btn border bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500"
