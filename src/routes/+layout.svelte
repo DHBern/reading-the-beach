@@ -13,6 +13,10 @@
 	initializeStores();
 </script>
 
-<Modal components={modalRegistry} />
+<Modal
+	background="bg-surface-900"
+	buttonNeutral="bg-primary-500 text-surface-900 hover:bg-surface-900 hover:text-primary-500 border"
+	components={modalRegistry}
+/>
 
 <slot />

@@ -15,17 +15,28 @@
 		// Data
 		title: 'How to read the Beach Atlas',
 		body: `
-		<h2>Explore by regions</h2>
-        These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and, in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged as a site where its effects have become most dramatically visible.
-        This project seeks to redress this neglect, reclaiming the beach as a central space of modernity and postmodernity: <a href="${base}/region/black-atlantic" class="badge variant-filled-secondary hover:!text-secondary-500 hover:!bg-surface-900">Black Atlantic</a>, <a href="${base}/region/mediterranean"  class="badge variant-filled-tertiary hover:!text-tertiary-500 hover:!bg-surface-900">Mediterranean</a>, <a href="${base}/region/northern-sea" class="badge bg-quarternary-500 text-surface-900  hover:!text-quarternary-500 hover:!bg-surface-900">Northern Sea</a>
-        <br><br>
-      <h2>Explore by topic</h2>
-        These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and, in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged as a site where its effects have become most dramatically visible.
-        One of the aims of this project is to produce an interactive online literary atlas of beach narratives, making our research accessible to a wider public: <a href="${base}/topic/death" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">death</a>, <a class="badge variant-filled">leisure</a>, <a class="badge variant-filled">migration and exile</a>, <a class="badge variant-filled"> myth</a>, <a class="badge variant-filled"> pollution</a>
-        <br><br>
-      <h2>About the dataset</h2>
-        These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and, in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged as a site where its effects have become most dramatically visible.
-        This project seeks to redress this neglect, reclaiming the beach as a central space of modernity and postmodernity. We will approach the beach from the perspectives of postcolonial studies, ecocriticism and new materialism. One of the aims of this project is to produce an interactive online literary atlas of beach narratives, making our research accessible to a wider public.
+		<h2 class="h3 my-3">Explore by regions</h2>
+        <p>These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and,
+		 in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged
+		  as a site where its effects have become most dramatically visible. This project seeks to redress this neglect, reclaiming the beach as a central space of modernity
+		and postmodernity: <a href="${base}/region/black-atlantic" class="badge variant-filled-secondary hover:!text-secondary-500 hover:!bg-surface-900">Black Atlantic</a>,
+		<a href="${base}/region/mediterranean"  class="badge variant-filled-tertiary hover:!text-tertiary-500 hover:!bg-surface-900">Mediterranean</a>,
+		<a href="${base}/region/northern-sea" class="badge bg-quarternary-500 text-surface-900  hover:!text-quarternary-500 hover:!bg-surface-900">Northern Sea</a></p>
+      <h2 class="h3 my-3">Explore by topic</h2>
+        <p>These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and,
+		 in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged
+		  as a site where its effects have become most dramatically visible. One of the aims of this project is to produce an interactive online literary atlas of beach narratives,
+		  making our research accessible to a wider public: <a href="${base}/topic/death" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">death</a>,
+		 <a href="${base}/topic/leisure" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">leisure</a>,
+		 <a href="${base}/topic/migration" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">migration and exile</a>,
+		 <a href="${base}/topic/myth" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">myth</a>,
+		 <a href="${base}/topic/pollution" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">pollution</a></p>
+      <h2 class="h3 my-3">About the dataset</h2>
+        <p>These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and,
+			 in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged
+			  as a site where its effects have become most dramatically visible. This project seeks to redress this neglect, reclaiming the beach as a central space of modernity
+			  and postmodernity. We will approach the beach from the perspectives of postcolonial studies, ecocriticism and new materialism. One of the aims of this project is to
+			  produce an interactive online literary atlas of beach narratives, making our research accessible to a wider public.</p>
 		`,
 		buttonTextCancel: 'Close'
 	};
