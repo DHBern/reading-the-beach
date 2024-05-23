@@ -30,7 +30,6 @@ export default {
 	},
 	plugins: [
 		typography,
-		containerQueries,
 		skeleton({
 			themes: {
 				preset: [
