@@ -162,7 +162,7 @@ and morbid.</p>`
 		>
 			<i class="fa-solid fa-info"></i>
 		</button>
-		<section class="mt-2 lg:mt-6  col-span-2">
+		<section class="mt-2 lg:mt-6">
 			{#snippet button(href, baseColor, hoverColor, text)}
 				<a
 					href="{href}"
@@ -233,7 +233,6 @@ and morbid.</p>`
 			</div>
 		</section>
 		<section class="hidden lg:block mt-2 lg:mt-6 flex-grow">
-
 			<h2 class="h3 my-4">explore by topic</h2>
 			<ul>
 				<li class="my-2">
