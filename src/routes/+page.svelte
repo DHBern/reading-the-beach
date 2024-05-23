@@ -162,103 +162,98 @@ and morbid.</p>`
 		>
 			<i class="fa-solid fa-info"></i>
 		</button>
-		<section class="mt-2 lg:mt-6">
+		<section class="mt-2 lg:mt-6  col-span-2">
+			{#snippet button(href, baseColor, hoverColor, text)}
+				<a
+					href="{href}"
+					class="btn border bg-{baseColor} text-{hoverColor} hover:bg-{hoverColor} hover:text-{baseColor} hover:filter-none"
+				>
+					{text}
+				</a>
+			{/snippet}
+			{#snippet atlanticButton()}
+				{@render button(`${base}/region/black-atlantic`, `secondary-500`, `surface-900`, `Black Atlantic`)}
+			{/snippet}
+			{#snippet mediterraneanButton()}
+				{@render button(`${base}/region/mediterranean`, `tertiary-500`, `surface-900`, `Mediterranean`)}
+			{/snippet}
+			{#snippet northernButton()}
+				{@render button(`${base}/region/northern-sea`, `quarternary-500`, `surface-900`, `Northern Sea`)}
+			{/snippet}
+			{#snippet deathButton()}
+				{@render button(`${base}/topic/death`, `surface-900`, `primary-500`, `death`)}
+			{/snippet}
+			{#snippet leisureButton()}
+				{@render button(`${base}/topic/leisure`, `surface-900`, `primary-500`, `leisure`)}
+			{/snippet}
+			{#snippet migrationButton()}
+				{@render button(`${base}/topic/migration`, `surface-900`, `primary-500`, `migration and exile`)}
+			{/snippet}
+			{#snippet mythButton()}
+				{@render button(`${base}/topic/myth`, `surface-900`, `primary-500`, `myth`)}
+			{/snippet}
+			{#snippet pollutionButton()}
+				{@render button(`${base}/topic/pollution`, `surface-900`, `primary-500`, `pollution`)}
+			{/snippet}
+			<div class="lg:hidden">
+				<Accordion class="fill-primary-500" padding="pl-0 pr-4 py-2" >
+					<AccordionItem>
+						<svelte:fragment slot="summary"><h2 class="h3">explore by region</h2></svelte:fragment>
+						<svelte:fragment slot="content">
+							{@render atlanticButton()}
+							{@render mediterraneanButton()}
+							{@render northernButton()}
+						</svelte:fragment>
+					</AccordionItem>
+					<AccordionItem>
+						<svelte:fragment slot="summary"><h2 class="h3">explore by topic</h2></svelte:fragment>
+						<svelte:fragment slot="content">
+							{@render deathButton()}
+							{@render leisureButton()}
+							{@render migrationButton()}
+							{@render mythButton()}
+							{@render pollutionButton()}
+						</svelte:fragment>
+					</AccordionItem>
+				</Accordion>
+			</div>
+			<div class="hidden lg:block">
 			<h2 class="h3 my-4">explore by region</h2>
 			<ul>
 				<li class="my-2">
-					<a
-						href="{base}/region/black-atlantic"
-						class="btn border bg-secondary-500 text-surface-900 hover:bg-surface-900 hover:text-secondary-500 hover:filter-none"
-					>
-						Black Atlantic
-					</a>
+					{@render atlanticButton()}
 				</li>
 				<li class="my-2">
-					<a
-						href="{base}/region/mediterranean"
-						class="btn border bg-tertiary-500 text-surface-900 hover:bg-surface-900 hover:text-tertiary-500 hover:filter-none"
-						>Mediterranean</a
-					>
+					{@render mediterraneanButton()}
 				</li>
 				<li class="my-2">
-					<a
-						href="{base}/region/northern-sea"
-						class="btn border bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500 hover:filter-none"
-					>
-						Northern Sea
-					</a>
+					{@render northernButton()}
 				</li>
 			</ul>
+			</div>
 		</section>
-		<section class="mt-2 lg:mt-6 flex-grow">
+		<section class="hidden lg:block mt-2 lg:mt-6 flex-grow">
+
 			<h2 class="h3 my-4">explore by topic</h2>
 			<ul>
 				<li class="my-2">
-					<a
-						href="{base}/topic/death"
-						class="btn bg-surface-900 text-primary-500 border hover:bg-primary-500 hover:text-surface-900"
-						>death</a
-					>
+					{@render deathButton()}
 				</li>
 				<li class="my-2">
-					<a
-						href="{base}/topic/leisure"
-						class="btn bg-surface-900 text-primary-500 border hover:bg-primary-500 hover:text-surface-900"
-						>leisure</a
-					>
+					{@render leisureButton()}
 				</li>
 				<li class="my-2">
-					<a
-						href="{base}/topic/migration"
-						class="btn bg-surface-900 text-primary-500 border hover:bg-primary-500 hover:text-surface-900"
-						>migration and exile</a
-					>
+					{@render migrationButton()}
 				</li>
 				<li class="my-2">
-					<a
-						href="{base}/topic/myth"
-						class="btn bg-surface-900 text-primary-500 border hover:bg-primary-500 hover:text-surface-900"
-						>myth</a
-					>
+					{@render mythButton()}
 				</li>
 				<li class="my-2">
-					<a
-						href="{base}/topic/pollution"
-						class="btn bg-surface-900 text-primary-500 border hover:bg-primary-500 hover:text-surface-900"
-						>pollution</a
-					>
+					{@render pollutionButton()}
 				</li>
 			</ul>
 		</section>
-		<Accordion class="mt-2 lg:mt-6 fill-primary-500 @[320px]:col-span-2 overflow-scroll">
-			<AccordionItem>
-				<svelte:fragment slot="summary">About this project</svelte:fragment>
-				<svelte:fragment slot="content">
-					<p>
-						In narrative, the beach functions as a site of heightened intensity and crisis. In many
-						Anglophone novels and stories from c. 1890 onward, it is the setting of the turning
-						point and climax, notably creative acts, scenes of self-discovery and rebirth, erotic
-						encounters and scenes of death.
-					</p>
-					<p>
-						These literary representations reflect the importance of the beach in everyday culture,
-						as a vacation site, a contact zone, a site of capitalist production and, in recent
-						years, an arrival zone for refugees and a scene of terrorist attacks. With the
-						irrefutability of global warming, the littoral ecotone has also emerged as a site where
-						its effects have become most dramatically visible.
-					</p>
-					<p>
-						Despite its literary, cultural and ecological importance, however, the beach has played
-						a relatively minor role in scholarship until fairly recently. This project seeks to
-						redress this neglect, reclaiming the beach as a central space of modernity and
-						postmodernity. We will approach the beach from the perspectives of postcolonial studies,
-						ecocriticism and new materialism. One of the aims of this project is to produce an
-						interactive online literary atlas of beach narratives, making our research accessible to
-						a wider public.
-					</p>
-				</svelte:fragment>
-			</AccordionItem>
-		</Accordion>
+
 	</svelte:fragment>
 	<div
 		class="grid"
