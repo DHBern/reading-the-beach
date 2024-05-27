@@ -4,6 +4,7 @@
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 </script>
 
+<!-- svelte-ignore element_invalid_self_closing_tag -->
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
 		<a
@@ -13,15 +14,15 @@
 		<section class="overflow-scroll">
 			{#snippet content()}
 				<p>
-					These literary representations reflect the importance of the beach in everyday culture, as a
-					vacation site, a contact zone, a site of capitalist production and, in recent years, an
+					These literary representations reflect the importance of the beach in everyday culture, as
+					a vacation site, a contact zone, a site of capitalist production and, in recent years, an
 					arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of
 					global warming, the littoral ecotone has also emerged as a site where its effects have
 					become most dramatically visible.
 				</p>
 				<p>
-					These literary representations reflect the importance of the beach in everyday culture, as a
-					vacation site, a contact zone, a site of capitalist production and, in recent years, an
+					These literary representations reflect the importance of the beach in everyday culture, as
+					a vacation site, a contact zone, a site of capitalist production and, in recent years, an
 					arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of
 					global warming, the littoral ecotone has also emerged as a site where its effects have
 					become most dramatically visible.
@@ -45,26 +46,66 @@
 					</li>
 				</ul>
 			{/snippet}
+			{#snippet icons()}
+				<dl class="my-2 flex gap-2 items-center flex-wrap">
+					<dt>
+						<enhanced:img src="$lib/icons/black-atlantic/BA_death.svg" alt="death icon" />
+					</dt>
+					<dd class="mr-4">Death</dd>
+					<dt>
+						<enhanced:img src="$lib/icons/black-atlantic/BA_leisure.svg" alt="leisure icon" />
+					</dt>
+					<dd class="mr-4">Leisure</dd>
+					<dt>
+						<enhanced:img src="$lib/icons/black-atlantic/BA_migration.svg" alt="migration icon" />
+					</dt>
+					<dd class="mr-4">Migration</dd>
+					<dt>
+						<enhanced:img src="$lib/icons/black-atlantic/BA_myth.svg" alt="myth icon" />
+					</dt>
+					<dd class="mr-4">Myth</dd>
+					<dt>
+						<enhanced:img src="$lib/icons/black-atlantic/BA_pollution.svg" alt="pollution icon" />
+					</dt>
+					<dd class="mr-4">Pollution</dd>
+				</dl>
+			{/snippet}
 			<div class="lg:hidden">
-			<Accordion class="fill-primary-500" padding="pl-0 pr-4 py-2" >
-				<AccordionItem>
-					<svelte:fragment slot="summary"><h2 class="h3 mt-4 mb-2">Black Atlantic</h2></svelte:fragment>
-					<svelte:fragment slot="content">
-						{@render content()}
-					</svelte:fragment>
-				</AccordionItem>
-				<AccordionItem>
-					<svelte:fragment slot="summary"><h2 class="h3">explore more regions</h2></svelte:fragment>
-					<svelte:fragment slot="content">
-						{@render buttons()}
-					</svelte:fragment>
-				</AccordionItem>
-			</Accordion>
+				<Accordion class="fill-primary-500" padding="pl-0 pr-4 py-2">
+					<AccordionItem>
+						<svelte:fragment slot="summary">
+							<h2 class="h3 mt-4 mb-2">Black Atlantic</h2>
+						</svelte:fragment>
+						<svelte:fragment slot="content">
+							{@render content()}
+						</svelte:fragment>
+					</AccordionItem>
+					<AccordionItem>
+						<svelte:fragment slot="summary">
+							<h2 class="h3">Legend</h2>
+						</svelte:fragment>
+						<svelte:fragment slot="content">
+							{@render icons()}
+						</svelte:fragment>
+					</AccordionItem>
+					<AccordionItem>
+						<svelte:fragment slot="summary">
+							<h2 class="h3">explore more regions</h2>
+						</svelte:fragment>
+						<svelte:fragment slot="content">
+							{@render buttons()}
+						</svelte:fragment>
+					</AccordionItem>
+				</Accordion>
 			</div>
 			<div class="hidden lg:block">
 				<h2 class="h3 mt-4 mb-2">Black Atlantic</h2>
 				{@render content()}
 			</div>
+		</section>
+		<section class="my-4 hidden lg:block">
+			<h2 class="h3">Legend</h2>
+			{@render icons()}
 		</section>
 		<section class="my-4 hidden lg:block">
 			<h2 class="h3">explore more regions</h2>
@@ -73,7 +114,7 @@
 	</svelte:fragment>
 	<iframe
 		title="Black Atlantic map"
-		src="https://nodegoat.unibe.ch/viewer.p/34/2703/scenario/5/geo/fullscreen"
+		src="https://nodegoat.unibe.ch/viewer.p/47/2703/scenario/16/geo/"
 		width="100%"
 		height="100%"
 	>
