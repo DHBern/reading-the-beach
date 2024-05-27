@@ -139,7 +139,6 @@ and morbid.</p>`
 			]
 		}
 	};
-	let svg: SVGElement;
 
 	onMount(() => {
 		//check whether the cookie is set. if not, show the modal
@@ -149,9 +148,11 @@ and morbid.</p>`
 			document.cookie = 'showInfoModal=true; max-age=15552000';
 		}
 	});
+
+	let svgWidth: number;
+	let svgHeight: number;
 </script>
 
-<svelte:window on:resize={() => (svg = svg)} />
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
 		<p>A Literary Atlas of the Beach in the Long 20th Century</p>
@@ -165,20 +166,35 @@ and morbid.</p>`
 		<section class="mt-2 lg:mt-6">
 			{#snippet button(href, baseColor, hoverColor, text)}
 				<a
-					href="{href}"
+					{href}
 					class="btn border bg-{baseColor} text-{hoverColor} hover:bg-{hoverColor} hover:text-{baseColor} hover:filter-none"
 				>
 					{text}
 				</a>
 			{/snippet}
 			{#snippet atlanticButton()}
-				{@render button(`${base}/region/black-atlantic`, `secondary-500`, `surface-900`, `Black Atlantic`)}
+				{@render button(
+					`${base}/region/black-atlantic`,
+					`secondary-500`,
+					`surface-900`,
+					`Black Atlantic`
+				)}
 			{/snippet}
 			{#snippet mediterraneanButton()}
-				{@render button(`${base}/region/mediterranean`, `tertiary-500`, `surface-900`, `Mediterranean`)}
+				{@render button(
+					`${base}/region/mediterranean`,
+					`tertiary-500`,
+					`surface-900`,
+					`Mediterranean`
+				)}
 			{/snippet}
 			{#snippet northernButton()}
-				{@render button(`${base}/region/northern-sea`, `quarternary-500`, `surface-900`, `Northern Sea`)}
+				{@render button(
+					`${base}/region/northern-sea`,
+					`quarternary-500`,
+					`surface-900`,
+					`Northern Sea`
+				)}
 			{/snippet}
 			{#snippet deathButton()}
 				{@render button(`${base}/topic/death`, `surface-900`, `primary-500`, `death`)}
@@ -187,7 +203,12 @@ and morbid.</p>`
 				{@render button(`${base}/topic/leisure`, `surface-900`, `primary-500`, `leisure`)}
 			{/snippet}
 			{#snippet migrationButton()}
-				{@render button(`${base}/topic/migration`, `surface-900`, `primary-500`, `migration and exile`)}
+				{@render button(
+					`${base}/topic/migration`,
+					`surface-900`,
+					`primary-500`,
+					`migration and exile`
+				)}
 			{/snippet}
 			{#snippet mythButton()}
 				{@render button(`${base}/topic/myth`, `surface-900`, `primary-500`, `myth`)}
@@ -196,7 +217,7 @@ and morbid.</p>`
 				{@render button(`${base}/topic/pollution`, `surface-900`, `primary-500`, `pollution`)}
 			{/snippet}
 			<div class="lg:hidden">
-				<Accordion class="fill-primary-500" padding="pl-0 pr-4 py-2" >
+				<Accordion class="fill-primary-500" padding="pl-0 pr-4 py-2">
 					<AccordionItem>
 						<svelte:fragment slot="summary"><h2 class="h3">explore by region</h2></svelte:fragment>
 						<svelte:fragment slot="content">
@@ -218,18 +239,18 @@ and morbid.</p>`
 				</Accordion>
 			</div>
 			<div class="hidden lg:block">
-			<h2 class="h3 my-4">explore by region</h2>
-			<ul>
-				<li class="my-2">
-					{@render atlanticButton()}
-				</li>
-				<li class="my-2">
-					{@render mediterraneanButton()}
-				</li>
-				<li class="my-2">
-					{@render northernButton()}
-				</li>
-			</ul>
+				<h2 class="h3 my-4">explore by region</h2>
+				<ul>
+					<li class="my-2">
+						{@render atlanticButton()}
+					</li>
+					<li class="my-2">
+						{@render mediterraneanButton()}
+					</li>
+					<li class="my-2">
+						{@render northernButton()}
+					</li>
+				</ul>
 			</div>
 		</section>
 		<section class="hidden lg:block mt-2 lg:mt-6 flex-grow">
@@ -252,14 +273,10 @@ and morbid.</p>`
 				</li>
 			</ul>
 		</section>
-
 	</svelte:fragment>
 	<div
 		class="grid"
-		style="--scaling: {Math.max(
-			svg?.clientWidth / dimensions.width,
-			svg?.clientHeight / dimensions.height
-		) || 1};"
+		style="--scaling: {Math.max(svgWidth / dimensions.width, svgHeight / dimensions.height) || 1};"
 	>
 		<div class="row-span-full col-span-full h-screen">
 			<enhanced:img src={MapImage} class="h-full object-cover" alt="world map" />
@@ -270,7 +287,8 @@ and morbid.</p>`
 			preserveAspectRatio="xMidYMid slice"
 			id="map"
 			class="row-span-full col-span-full h-screen w-full"
-			bind:this={svg}
+			bind:clientHeight={svgHeight}
+			bind:clientWidth={svgWidth}
 		>
 			<a href="{base}/region/black-atlantic">
 				<polygon
@@ -279,7 +297,7 @@ and morbid.</p>`
 				></polygon>
 			</a>
 			<foreignObject x="1600" y="1900" width="660" height="250" class="pointer-events-none">
-				{#if svg?.clientWidth}<button
+				{#if svgWidth}<button
 						on:click={() => modalStore.trigger(atlanticInfo)}
 						class="pointer-events-auto btn border bg-secondary-500 text-surface-900 hover:bg-surface-900 hover:text-secondary-500 hover:filter-none origin-top-left"
 						style="transform: scale(calc(1 / var(--scaling)));"
@@ -294,7 +312,7 @@ and morbid.</p>`
 				></polygon>
 			</a>
 			<foreignObject x="2300" y="1650" width="700" height="250" class="pointer-events-none">
-				{#if svg?.clientWidth}<button
+				{#if svgWidth}<button
 						on:click={() => modalStore.trigger(mediterraneanInfo)}
 						class="pointer-events-auto btn border bg-tertiary-500 text-surface-900 hover:bg-surface-900 hover:text-tertiary-500 hover:filter-none origin-top-left"
 						style="transform: scale(calc(1 / var(--scaling)));"
@@ -309,7 +327,7 @@ and morbid.</p>`
 				></polygon>
 			</a>
 			<foreignObject x="1800" y="1400" width="660" height="250" class="pointer-events-none">
-				{#if svg?.clientWidth}<button
+				{#if svgWidth}<button
 						on:click={() => modalStore.trigger(northernInfo)}
 						class="pointer-events-auto btn border bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500 hover:filter-none origin-top-left"
 						style="transform: scale(calc(1 / var(--scaling)));"
