@@ -7,7 +7,7 @@
 		<h1 class="flex-none text-3xl font-extrabold my-[0.6rem]">
 			<a href="{base}/">The Beach Atlas</a>
 		</h1>
-		<div class="flex flex-col">
+		<div class="flex flex-col overflow-auto">
 			<slot name="sidebar"></slot>
 		</div>
 	</aside>
