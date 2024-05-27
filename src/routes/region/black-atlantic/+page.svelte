@@ -47,27 +47,37 @@
 				</ul>
 			{/snippet}
 			{#snippet icons()}
-				<dl class="my-2 flex gap-2 items-center flex-wrap">
-					<dt>
-						<enhanced:img src="$lib/icons/black-atlantic/BA_death.svg" alt="death icon" />
-					</dt>
-					<dd class="mr-4">Death</dd>
-					<dt>
-						<enhanced:img src="$lib/icons/black-atlantic/BA_leisure.svg" alt="leisure icon" />
-					</dt>
-					<dd class="mr-4">Leisure</dd>
-					<dt>
-						<enhanced:img src="$lib/icons/black-atlantic/BA_migration.svg" alt="migration icon" />
-					</dt>
-					<dd class="mr-4">Migration</dd>
-					<dt>
-						<enhanced:img src="$lib/icons/black-atlantic/BA_myth.svg" alt="myth icon" />
-					</dt>
-					<dd class="mr-4">Myth</dd>
-					<dt>
-						<enhanced:img src="$lib/icons/black-atlantic/BA_pollution.svg" alt="pollution icon" />
-					</dt>
-					<dd class="mr-4">Pollution</dd>
+				<dl class="my-2 flex gap-2 items-center flex-wrap lg:grid">
+					<div class="contents lg:flex gap-2 items-center">
+						<dt>
+							<enhanced:img src="$lib/icons/black-atlantic/BA_death.svg" alt="death icon" />
+						</dt>
+						<dd class="mr-4">Death</dd>
+					</div>
+					<div class="contents lg:flex gap-2 items-center">
+						<dt>
+							<enhanced:img src="$lib/icons/black-atlantic/BA_leisure.svg" alt="leisure icon" />
+						</dt>
+						<dd class="mr-4">Leisure</dd>
+					</div>
+					<div class="contents lg:flex gap-2 items-center">
+						<dt>
+							<enhanced:img src="$lib/icons/black-atlantic/BA_migration.svg" alt="migration icon" />
+						</dt>
+						<dd class="mr-4">Migration</dd>
+					</div>
+					<div class="contents lg:flex gap-2 items-center">
+						<dt>
+							<enhanced:img src="$lib/icons/black-atlantic/BA_myth.svg" alt="myth icon" />
+						</dt>
+						<dd class="mr-4">Myth</dd>
+					</div>
+					<div class="contents lg:flex gap-2 items-center">
+						<dt>
+							<enhanced:img src="$lib/icons/black-atlantic/BA_pollution.svg" alt="pollution icon" />
+						</dt>
+						<dd class="mr-4">Pollution</dd>
+					</div>
 				</dl>
 			{/snippet}
 			<div class="lg:hidden">
