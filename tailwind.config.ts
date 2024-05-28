@@ -1,7 +1,6 @@
 import { join } from 'path';
 import type { Config } from 'tailwindcss';
 import typography from '@tailwindcss/typography';
-import containerQueries from '@tailwindcss/container-queries';
 import { skeleton } from '@skeletonlabs/tw-plugin';
 import { beach } from './src/beach';
 

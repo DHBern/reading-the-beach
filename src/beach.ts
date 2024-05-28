@@ -54,7 +54,7 @@ export const beach: QuarternaryConfig = {
 		'--color-secondary-200': '253 232 204', // #fde8cc
 		'--color-secondary-300': '251 219 174', // #fbdbae
 		'--color-secondary-400': '249 191 113', // #f9bf71
-		'--color-secondary-500': '246 164 52', // #f6a434
+		'--color-secondary-500': '233 252 0', // #e9fc00
 		'--color-secondary-600': '221 148 47', // #dd942f
 		'--color-secondary-700': '185 123 39', // #b97b27
 		'--color-secondary-800': '148 98 31', // #94621f
