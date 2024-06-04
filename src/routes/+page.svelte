@@ -12,31 +12,26 @@
 
 	const info: ModalSettings = {
 		type: 'alert',
-		// Data
-		title: 'How to read the Beach Atlas',
 		body: `
-		<h2 class="h3 my-3">Explore by regions</h2>
-        <p>These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and,
-		 in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged
-		  as a site where its effects have become most dramatically visible. This project seeks to redress this neglect, reclaiming the beach as a central space of modernity
-		and postmodernity: <a href="${base}/region/black-atlantic" class="badge variant-filled-secondary hover:!text-secondary-500 hover:!bg-surface-900">Black Atlantic</a>,
+		<p>Welcome to Digital Shores: An Interactive Atlas of Beach Narratives! Here you can access our visualisation of the function of the beach in (mainly) anglophone literature, published between 1890 and 2023. A map displays our selection of texts – novels, short stories, and narrative nonfiction – in which the beach plays a crucial role. From each text we have chosen relevant excerpts that showcase the function of the beach.</p>
+		<p>The atlas offers different filters that allow users to approach our material from several angles:</p>
+		<ul class="list-disc list-inside">
+			<li>A temporal slider shows historical developments</li>
+			<li>Texts can be grouped according to categories such as agents, events, genre, materiality, and mood</li>
+			<li>Regional maps illustrate the specificities of three model regions</li>
+			<li>Thematic maps visualise the geographical distribution of five overarching themes we have identified</li>
+		<ul>
+		<p>Enter here and embark on a journey to the beaches of the literary world!</p>
+		<h2 class="h3 my-3">Explore by region</h2>
+        <p>The texts are grouped into three main regions, colour-coordinated, which can be more closely examined: <a href="${base}/region/black-atlantic" class="badge variant-filled-secondary hover:!text-secondary-500 hover:!bg-surface-900">Black Atlantic</a>,
 		<a href="${base}/region/mediterranean"  class="badge variant-filled-tertiary hover:!text-tertiary-500 hover:!bg-surface-900">Mediterranean</a>,
-		<a href="${base}/region/northern-sea" class="badge bg-quarternary-500 text-surface-900  hover:!text-quarternary-500 hover:!bg-surface-900">Northern Seas</a></p>
-      <h2 class="h3 my-3">Explore by topic</h2>
-        <p>These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and,
-		 in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged
-		  as a site where its effects have become most dramatically visible. One of the aims of this project is to produce an interactive online literary atlas of beach narratives,
-		  making our research accessible to a wider public: <a href="${base}/topic/death" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">death</a>,
-		 <a href="${base}/topic/leisure" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">leisure</a>,
-		 <a href="${base}/topic/migration" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">migration and exile</a>,
-		 <a href="${base}/topic/myth" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">myth</a>,
-		 <a href="${base}/topic/pollution" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">pollution</a></p>
-      <h2 class="h3 my-3">About the dataset</h2>
-        <p>These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and,
-			 in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged
-			  as a site where its effects have become most dramatically visible. This project seeks to redress this neglect, reclaiming the beach as a central space of modernity
-			  and postmodernity. We will approach the beach from the perspectives of postcolonial studies, ecocriticism and new materialism. One of the aims of this project is to
-			  produce an interactive online literary atlas of beach narratives, making our research accessible to a wider public.</p>
+		<a href="${base}/region/northern-sea" class="badge bg-quarternary-500 text-surface-900  hover:!text-quarternary-500 hover:!bg-surface-900">Northern Seas</a>. While some settings can be exactly identified, literature often plays with (re-)imagined and fictionalised places. [These varying degrees of precision are indicated by different icons.] Therefore, texts can only be placed on the map as approximations without claim to geographical precision.</p>
+      <h2 class="h3 my-3">Explore by theme</h2>
+        <p>Five maps show the distribution of texts according to themes we have identified as particularly prevalent in relation to the beach: <a href="${base}/theme/death" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">death</a>,
+		 <a href="${base}/theme/leisure" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">leisure</a>,
+		 <a href="${base}/theme/migration" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">migration and exile</a>,
+		 <a href="${base}/theme/myth" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">myth</a> and
+		 <a href="${base}/theme/pollution" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">pollution</a>. These have crystallised as key concerns shared across texts in our readings.</p>
 		`,
 		buttonTextCancel: 'Close'
 	};
@@ -52,17 +47,11 @@
 			color: 'secondary-500',
 			tabs: [
 				{
-					name: 'mood',
-					label: 'Mood',
-					content: `<p>This is the Northern Seas region. This region encompasses texts that are set in countries
-								bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
-								Norwegian
-								Sea. For this region, some clear results have been identified. The materiality
-								of the beaches in these texts are often rocky, shingles, fossils, driftwood
-								and plastic.
-								The mood is also characterised
-								by being contemplative, curious,
-								and morbid.</p>`
+					name: 'about',
+					label: 'About',
+					content: `<p>This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the Americas, and the Caribbean. Here represented as a geographical region,
+						the Black Atlantic refers to a term coined by Paul Gilroy which emphasises the necessity of a transnational and intercultural perspective that takes the colonial legacy
+						into account. Given its history, it was surprising to find the expected themes of migration and death appear rarely in our selection of texts.</p>`
 				},
 				{
 					name: 'event',
@@ -100,14 +89,13 @@
 					name: 'mood',
 					label: 'Mood',
 					content: `<p>This is the Northern Seas region. This region encompasses texts that are set in countries
-bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
-Norwegian
-Sea. For this region, some clear results have been identified. The materiality
-of the beaches in these texts are often rocky, shingles, fossils, driftwood
-and plastic.
-The mood is also characterised
-by being contemplative, curious,
-and morbid.</p>`
+						bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
+						Norwegian Sea. For this region, some clear results have been identified. The materiality
+						of the beaches in these texts are often rocky, shingles, fossils, driftwood
+						and plastic.
+						The mood is also characterised
+						by being contemplative, curious,
+						and morbid.</p>`
 				}
 			]
 		}
@@ -124,17 +112,14 @@ and morbid.</p>`
 			color: 'tertiary-500',
 			tabs: [
 				{
-					name: 'mood',
-					label: 'Mood',
-					content: `<p>This is the Northern Seas region. This region encompasses texts that are set in countries
-								bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
-								Norwegian
-								Sea. For this region, some clear results have been identified. The materiality
-								of the beaches in these texts are often rocky, shingles, fossils, driftwood
-								and plastic.
-								The mood is also characterised
-								by being contemplative, curious,
-								and morbid.</p>`
+					name: 'about',
+					label: 'About',
+					content: `<p>This is the Mediterranean region. It includes texts set in southern Europe, Asia Minor, and Northern Africa.
+						The Mediterranean is its function as a holiday destination, but also as a link between north and south, east and west.
+						This is reflected in the events mainly associated with Mediterranean beaches: leisure activities, such as bathing and swimming, but also encounters,
+						arrivals, and departures. Despite the prominence of vacationscape, literary scenes set on Mediterranean beaches are shaped by contemplative and foreboding
+						moods. This suggests that the Mediterranean is an ambivalent space, a site of tension in which different interests grapple with each other and in which
+						carefree holiday atmospheres can quickly tip into something more sinister.</p>`
 				}
 			]
 		}
@@ -155,7 +140,7 @@ and morbid.</p>`
 
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
-		<p>A Literary Atlas of the Beach in the Long 20th Century</p>
+		<p>An Interactive Atlas of Beach Narratives</p>
 		<button
 			type="button"
 			class="btn-icon mt-3 bg-primary-500 text-surface-900 hover:bg-surface-900 hover:text-primary-500 hover:filter-none border"
@@ -197,24 +182,24 @@ and morbid.</p>`
 				)}
 			{/snippet}
 			{#snippet deathButton()}
-				{@render button(`${base}/topic/death`, `surface-900`, `primary-500`, `death`)}
+				{@render button(`${base}/theme/death`, `surface-900`, `primary-500`, `death`)}
 			{/snippet}
 			{#snippet leisureButton()}
-				{@render button(`${base}/topic/leisure`, `surface-900`, `primary-500`, `leisure`)}
+				{@render button(`${base}/theme/leisure`, `surface-900`, `primary-500`, `leisure`)}
 			{/snippet}
 			{#snippet migrationButton()}
 				{@render button(
-					`${base}/topic/migration`,
+					`${base}/theme/migration`,
 					`surface-900`,
 					`primary-500`,
 					`migration and exile`
 				)}
 			{/snippet}
 			{#snippet mythButton()}
-				{@render button(`${base}/topic/myth`, `surface-900`, `primary-500`, `myth`)}
+				{@render button(`${base}/theme/myth`, `surface-900`, `primary-500`, `myth`)}
 			{/snippet}
 			{#snippet pollutionButton()}
-				{@render button(`${base}/topic/pollution`, `surface-900`, `primary-500`, `pollution`)}
+				{@render button(`${base}/theme/pollution`, `surface-900`, `primary-500`, `pollution`)}
 			{/snippet}
 			<div class="lg:hidden">
 				<Accordion class="fill-primary-500" padding="pl-0 pr-4 py-2">
@@ -227,7 +212,7 @@ and morbid.</p>`
 						</svelte:fragment>
 					</AccordionItem>
 					<AccordionItem>
-						<svelte:fragment slot="summary"><h2 class="h3">explore by topic</h2></svelte:fragment>
+						<svelte:fragment slot="summary"><h2 class="h3">explore by theme</h2></svelte:fragment>
 						<svelte:fragment slot="content">
 							{@render deathButton()}
 							{@render leisureButton()}
@@ -254,7 +239,7 @@ and morbid.</p>`
 			</div>
 		</section>
 		<section class="hidden lg:block mt-2 lg:mt-6 flex-grow">
-			<h2 class="h3 my-4">explore by topic</h2>
+			<h2 class="h3 my-4">explore by theme</h2>
 			<ul>
 				<li class="my-2">
 					{@render deathButton()}

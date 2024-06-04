@@ -14,18 +14,12 @@
 		<section class="overflow-scroll">
 			{#snippet content()}
 				<p>
-					These literary representations reflect the importance of the beach in everyday culture, as
-					a vacation site, a contact zone, a site of capitalist production and, in recent years, an
-					arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of
-					global warming, the littoral ecotone has also emerged as a site where its effects have
-					become most dramatically visible.
-				</p>
-				<p>
-					These literary representations reflect the importance of the beach in everyday culture, as
-					a vacation site, a contact zone, a site of capitalist production and, in recent years, an
-					arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of
-					global warming, the littoral ecotone has also emerged as a site where its effects have
-					become most dramatically visible.
+					This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the
+					Americas, and the Caribbean. Here represented as a geographical region, the Black Atlantic
+					refers to a term coined by Paul Gilroy which emphasises the necessity of a transnational
+					and intercultural perspective that takes the colonial legacy into account. Given its
+					history, it was surprising to find the expected themes of migration and death appear
+					rarely in our selection of texts.
 				</p>
 			{/snippet}
 			{#snippet buttons()}
