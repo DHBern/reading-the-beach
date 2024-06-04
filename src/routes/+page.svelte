@@ -86,8 +86,8 @@
 			color: 'quarternary-500',
 			tabs: [
 				{
-					name: 'mood',
-					label: 'Mood',
+					name: 'about',
+					label: 'About',
 					content: `<p>This is the Northern Seas region. This region encompasses texts that are set in countries
 						bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
 						Norwegian Sea. For this region, some clear results have been identified. The materiality
