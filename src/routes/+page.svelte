@@ -6,7 +6,7 @@
 	import dimensions from '$lib/Worldmap-Base.png?as=meta:height;width';
 	import { getModalStore, Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 	import type { ModalSettings } from '@skeletonlabs/skeleton';
-	import { onMount } from 'svelte';
+	import { onMount, tick } from 'svelte';
 
 	const modalStore = getModalStore();
 
@@ -15,17 +15,17 @@
 		body: `
 		<p>Welcome to Digital Shores: An Interactive Atlas of Beach Narratives! Here you can access our visualisation of the function of the beach in (mainly) anglophone literature, published between 1890 and 2023. A map displays our selection of texts – novels, short stories, and narrative nonfiction – in which the beach plays a crucial role. From each text we have chosen relevant excerpts that showcase the function of the beach.</p>
 		<p>The atlas offers different filters that allow users to approach our material from several angles:</p>
-		<ul class="list-disc list-inside">
+		<ul class="list-disc list-outside ml-4">
 			<li>A temporal slider shows historical developments</li>
 			<li>Texts can be grouped according to categories such as agents, events, genre, materiality, and mood</li>
 			<li>Regional maps illustrate the specificities of three model regions</li>
 			<li>Thematic maps visualise the geographical distribution of five overarching themes we have identified</li>
-		<ul>
+		</ul>
 		<p>Enter here and embark on a journey to the beaches of the literary world!</p>
 		<h2 class="h3 my-3">Explore by region</h2>
         <p>The texts are grouped into three main regions, colour-coordinated, which can be more closely examined: <a href="${base}/region/black-atlantic" class="badge variant-filled-secondary hover:!text-secondary-500 hover:!bg-surface-900">Black Atlantic</a>,
 		<a href="${base}/region/mediterranean"  class="badge variant-filled-tertiary hover:!text-tertiary-500 hover:!bg-surface-900">Mediterranean</a>,
-		<a href="${base}/region/northern-sea" class="badge bg-quarternary-500 text-surface-900  hover:!text-quarternary-500 hover:!bg-surface-900">Northern Seas</a>. While some settings can be exactly identified, literature often plays with (re-)imagined and fictionalised places. [These varying degrees of precision are indicated by different icons.] Therefore, texts can only be placed on the map as approximations without claim to geographical precision.</p>
+		<a href="${base}/region/northern-sea" class="badge bg-quarternary-500 text-surface-900  hover:!text-quarternary-500 hover:!bg-surface-900">Northern Seas</a>. While some settings can be exactly identified, literature often plays with (re-)imagined and fictionalised places. Therefore, texts can only be placed on the map as approximations without claim to geographical precision.</p>
       <h2 class="h3 my-3">Explore by theme</h2>
         <p>Five maps show the distribution of texts according to themes we have identified as particularly prevalent in relation to the beach: <a href="${base}/theme/death" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">death</a>,
 		 <a href="${base}/theme/leisure" class="badge bg-surface-900 hover:bg-primary-500 hover:text-surface-900 border">leisure</a>,
@@ -125,12 +125,16 @@
 		}
 	};
 
-	onMount(() => {
+	onMount(async () => {
 		//check whether the cookie is set. if not, show the modal
 		if (!document.cookie.includes('showInfoModal')) {
 			modalStore.trigger(info);
 			//set the cookie to expire in 6 months
 			document.cookie = 'showInfoModal=true; max-age=15552000';
+			await tick();
+
+			//scroll to the top of the modal
+			document.querySelector('.modal-body').scrollTo({ top: 0, behavior: 'instant' });
 		}
 	});
 
@@ -144,7 +148,12 @@
 		<button
 			type="button"
 			class="btn-icon mt-3 bg-primary-500 text-surface-900 hover:bg-surface-900 hover:text-primary-500 hover:filter-none border"
-			on:click={() => modalStore.trigger(info)}
+			on:click={async () => {
+				modalStore.trigger(info);
+				//wait until the modal is rendered and then scroll to the top
+				await tick();
+				document.querySelector('.modal-body').scrollTo({ top: 0, behavior: 'instant' });
+			}}
 		>
 			<i class="fa-solid fa-info"></i>
 		</button>
