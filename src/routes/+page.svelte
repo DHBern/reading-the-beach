@@ -21,7 +21,7 @@
 		  as a site where its effects have become most dramatically visible. This project seeks to redress this neglect, reclaiming the beach as a central space of modernity
 		and postmodernity: <a href="${base}/region/black-atlantic" class="badge variant-filled-secondary hover:!text-secondary-500 hover:!bg-surface-900">Black Atlantic</a>,
 		<a href="${base}/region/mediterranean"  class="badge variant-filled-tertiary hover:!text-tertiary-500 hover:!bg-surface-900">Mediterranean</a>,
-		<a href="${base}/region/northern-sea" class="badge bg-quarternary-500 text-surface-900  hover:!text-quarternary-500 hover:!bg-surface-900">Northern Sea</a></p>
+		<a href="${base}/region/northern-sea" class="badge bg-quarternary-500 text-surface-900  hover:!text-quarternary-500 hover:!bg-surface-900">Northern Seas</a></p>
       <h2 class="h3 my-3">Explore by topic</h2>
         <p>These literary representations reflect the importance of the beach in everyday culture, as a vacation site, a contact zone, a site of capitalist production and,
 		 in recent years, an arrival zone for refugees and a scene of terrorist attacks. With the irrefutability of global warming, the littoral ecotone has also emerged
@@ -54,7 +54,7 @@
 				{
 					name: 'mood',
 					label: 'Mood',
-					content: `<p>This is the Northern Sea region. This region encompasses texts that are set in countries
+					content: `<p>This is the Northern Seas region. This region encompasses texts that are set in countries
 								bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
 								Norwegian
 								Sea. For this region, some clear results have been identified. The materiality
@@ -89,7 +89,7 @@
 	const northernInfo: ModalSettings = {
 		type: 'component',
 		component: 'info',
-		title: 'Northern Sea',
+		title: 'Northern Seas',
 		meta: {
 			region: 'northern-sea',
 			btnClasses:
@@ -99,7 +99,7 @@
 				{
 					name: 'mood',
 					label: 'Mood',
-					content: `<p>This is the Northern Sea region. This region encompasses texts that are set in countries
+					content: `<p>This is the Northern Seas region. This region encompasses texts that are set in countries
 bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
 Norwegian
 Sea. For this region, some clear results have been identified. The materiality
@@ -126,7 +126,7 @@ and morbid.</p>`
 				{
 					name: 'mood',
 					label: 'Mood',
-					content: `<p>This is the Northern Sea region. This region encompasses texts that are set in countries
+					content: `<p>This is the Northern Seas region. This region encompasses texts that are set in countries
 								bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
 								Norwegian
 								Sea. For this region, some clear results have been identified. The materiality
@@ -193,7 +193,7 @@ and morbid.</p>`
 					`${base}/region/northern-sea`,
 					`quarternary-500`,
 					`surface-900`,
-					`Northern Sea`
+					`Northern Seas`
 				)}
 			{/snippet}
 			{#snippet deathButton()}
@@ -332,7 +332,7 @@ and morbid.</p>`
 						class="pointer-events-auto btn border bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500 hover:filter-none origin-top-left"
 						style="transform: scale(calc(1 / var(--scaling)));"
 					>
-						Northern Sea
+						Northern Seas
 					</button>{/if}
 			</foreignObject>
 		</svg>

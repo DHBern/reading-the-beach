@@ -41,7 +41,7 @@
 						<a
 							href="{base}/region/northern-sea"
 							class="btn border bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500"
-							>Northern Sea</a
+							>Northern Seas</a
 						>
 					</li>
 				</ul>
