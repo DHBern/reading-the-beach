@@ -7,73 +7,73 @@
 <!-- svelte-ignore element_invalid_self_closing_tag -->
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
+		{#snippet content()}
+			<p>
+				This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the
+				Americas, and the Caribbean. Here represented as a geographical region, the Black Atlantic
+				refers to a term coined by Paul Gilroy which emphasises the necessity of a transnational and
+				intercultural perspective that takes the colonial legacy into account. Given its history, it
+				was surprising to find the expected themes of migration and death appear rarely in our
+				selection of texts.
+			</p>
+		{/snippet}
+		{#snippet buttons()}
+			<ul>
+				<li class="mt-2">
+					<a
+						href="{base}/region/mediterranean"
+						class="btn border bg-tertiary-500 text-surface-900 hover:bg-surface-900 hover:text-tertiary-500 hover:filter-none"
+						>Mediterranean</a
+					>
+				</li>
+				<li class="mt-2">
+					<a
+						href="{base}/region/northern-sea"
+						class="btn border bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500"
+						>Northern Seas</a
+					>
+				</li>
+			</ul>
+		{/snippet}
+		{#snippet icons()}
+			<dl class="my-2 flex gap-2 items-center flex-wrap lg:grid">
+				<div class="contents lg:flex gap-2 items-center">
+					<dt>
+						<enhanced:img src="$lib/icons/black-atlantic/BA_death.svg" alt="death icon" />
+					</dt>
+					<dd class="mr-4">Death</dd>
+				</div>
+				<div class="contents lg:flex gap-2 items-center">
+					<dt>
+						<enhanced:img src="$lib/icons/black-atlantic/BA_leisure.svg" alt="leisure icon" />
+					</dt>
+					<dd class="mr-4">Leisure</dd>
+				</div>
+				<div class="contents lg:flex gap-2 items-center">
+					<dt>
+						<enhanced:img src="$lib/icons/black-atlantic/BA_migration.svg" alt="migration icon" />
+					</dt>
+					<dd class="mr-4">Migration</dd>
+				</div>
+				<div class="contents lg:flex gap-2 items-center">
+					<dt>
+						<enhanced:img src="$lib/icons/black-atlantic/BA_myth.svg" alt="myth icon" />
+					</dt>
+					<dd class="mr-4">Myth</dd>
+				</div>
+				<div class="contents lg:flex gap-2 items-center">
+					<dt>
+						<enhanced:img src="$lib/icons/black-atlantic/BA_pollution.svg" alt="pollution icon" />
+					</dt>
+					<dd class="mr-4">Pollution</dd>
+				</div>
+			</dl>
+		{/snippet}
 		<a
 			class="btn btn-sm w-fit mt-2 border bg-primary-500 text-surface-900 hover:bg-surface-900 hover:text-primary-500 hover:filter-none"
 			href="{base}/"><span><i class="fa-solid fa-arrow-left"></i></span><span>main map</span></a
 		>
 		<section class="overflow-scroll">
-			{#snippet content()}
-				<p>
-					This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the
-					Americas, and the Caribbean. Here represented as a geographical region, the Black Atlantic
-					refers to a term coined by Paul Gilroy which emphasises the necessity of a transnational
-					and intercultural perspective that takes the colonial legacy into account. Given its
-					history, it was surprising to find the expected themes of migration and death appear
-					rarely in our selection of texts.
-				</p>
-			{/snippet}
-			{#snippet buttons()}
-				<ul>
-					<li class="mt-2">
-						<a
-							href="{base}/region/mediterranean"
-							class="btn border bg-tertiary-500 text-surface-900 hover:bg-surface-900 hover:text-tertiary-500 hover:filter-none"
-							>Mediterranean</a
-						>
-					</li>
-					<li class="mt-2">
-						<a
-							href="{base}/region/northern-sea"
-							class="btn border bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500"
-							>Northern Seas</a
-						>
-					</li>
-				</ul>
-			{/snippet}
-			{#snippet icons()}
-				<dl class="my-2 flex gap-2 items-center flex-wrap lg:grid">
-					<div class="contents lg:flex gap-2 items-center">
-						<dt>
-							<enhanced:img src="$lib/icons/black-atlantic/BA_death.svg" alt="death icon" />
-						</dt>
-						<dd class="mr-4">Death</dd>
-					</div>
-					<div class="contents lg:flex gap-2 items-center">
-						<dt>
-							<enhanced:img src="$lib/icons/black-atlantic/BA_leisure.svg" alt="leisure icon" />
-						</dt>
-						<dd class="mr-4">Leisure</dd>
-					</div>
-					<div class="contents lg:flex gap-2 items-center">
-						<dt>
-							<enhanced:img src="$lib/icons/black-atlantic/BA_migration.svg" alt="migration icon" />
-						</dt>
-						<dd class="mr-4">Migration</dd>
-					</div>
-					<div class="contents lg:flex gap-2 items-center">
-						<dt>
-							<enhanced:img src="$lib/icons/black-atlantic/BA_myth.svg" alt="myth icon" />
-						</dt>
-						<dd class="mr-4">Myth</dd>
-					</div>
-					<div class="contents lg:flex gap-2 items-center">
-						<dt>
-							<enhanced:img src="$lib/icons/black-atlantic/BA_pollution.svg" alt="pollution icon" />
-						</dt>
-						<dd class="mr-4">Pollution</dd>
-					</div>
-				</dl>
-			{/snippet}
 			<div class="lg:hidden">
 				<Accordion class="fill-primary-500" padding="pl-0 pr-4 py-2">
 					<AccordionItem>

@@ -4,7 +4,7 @@
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 </script>
 
-{#snippet button(href, baseColor, hoverColor, text)}
+{#snippet button(href: string, baseColor: string, hoverColor: string, text: string)}
 	<a
 		{href}
 		class="btn border bg-{baseColor} text-{hoverColor} hover:bg-{hoverColor} hover:text-{baseColor} hover:filter-none"
@@ -16,36 +16,35 @@
 <!-- svelte-ignore element_invalid_self_closing_tag -->
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
+		{#snippet content()}
+			<p>
+				The theme "Myth" includes a variety of aspects such as re-writings of classical myths and
+				folklore as well as the appearance of mythological and fantastical creatures. Due to the
+				selection of texts, mermaids, selkies and other merfolk appear more in the Northern Seas and
+				Black Atlantic regions, while the Mediterranean features more rewritings of classical myths.
+			</p>
+		{/snippet}
+		{#snippet buttons()}
+			<ul>
+				<li class="mt-2">
+					{@render button(`${base}/theme/death`, `surface-900`, `primary-500`, `death`)}
+				</li>
+				<li class="mt-2">
+					{@render button(`${base}/theme/leisure`, `surface-900`, `primary-500`, `leisure`)}
+				</li>
+				<li class="mt-2">
+					{@render button(`${base}/theme/myth`, `surface-900`, `primary-500`, `myth`)}
+				</li>
+				<li class="mt-2">
+					{@render button(`${base}/theme/pollution`, `surface-900`, `primary-500`, `pollution`)}
+				</li>
+			</ul>
+		{/snippet}
 		<a
 			class="btn btn-sm w-fit mt-2 border bg-primary-500 text-surface-900 hover:bg-surface-900 hover:text-primary-500 hover:filter-none"
 			href="{base}/"><span><i class="fa-solid fa-arrow-left"></i></span><span>main map</span></a
 		>
 		<section class="overflow-scroll">
-			{#snippet content()}
-				<p>
-					The theme "Myth" includes a variety of aspects such as re-writings of classical myths and
-					folklore as well as the appearance of mythological and fantastical creatures. Due to the
-					selection of texts, mermaids, selkies and other merfolk appear more in the Northern Seas
-					and Black Atlantic regions, while the Mediterranean features more rewritings of classical
-					myths.
-				</p>
-			{/snippet}
-			{#snippet buttons()}
-				<ul>
-					<li class="mt-2">
-						{@render button(`${base}/theme/death`, `surface-900`, `primary-500`, `death`)}
-					</li>
-					<li class="mt-2">
-						{@render button(`${base}/theme/leisure`, `surface-900`, `primary-500`, `leisure`)}
-					</li>
-					<li class="mt-2">
-						{@render button(`${base}/theme/myth`, `surface-900`, `primary-500`, `myth`)}
-					</li>
-					<li class="mt-2">
-						{@render button(`${base}/theme/pollution`, `surface-900`, `primary-500`, `pollution`)}
-					</li>
-				</ul>
-			{/snippet}
 			<div class="lg:hidden">
 				<Accordion class="fill-primary-500" padding="pl-0 pr-4 py-2">
 					<AccordionItem>
