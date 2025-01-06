@@ -197,19 +197,28 @@
 			{@render button(`${base}/theme/pollution`, `surface-900`, `primary-500`, `pollution`)}
 		{/snippet}
 		<p>An Interactive Atlas of Beach Narratives</p>
-		<button
-			type="button"
-			class="btn-icon mt-3 bg-primary-500 text-surface-900 hover:bg-surface-900 hover:text-primary-500 hover:filter-none border"
-			aria-label="info"
-			on:click={async () => {
-				modalStore.trigger(info);
-				//wait until the modal is rendered and then scroll to the top
-				await tick();
-				document.querySelector('.modal-body')?.scrollTo({ top: 0, behavior: 'instant' });
-			}}
-		>
-			<i class="fa-solid fa-info"></i>
-		</button>
+		<div class="flex gap-2 mt-4">
+			<button
+				type="button"
+				class="btn-icon bg-primary-500 text-surface-900 hover:bg-surface-900 hover:text-primary-500 hover:filter-none border"
+				aria-label="info"
+				on:click={async () => {
+					modalStore.trigger(info);
+					//wait until the modal is rendered and then scroll to the top
+					await tick();
+					document.querySelector('.modal-body')?.scrollTo({ top: 0, behavior: 'instant' });
+				}}
+			>
+				<i class="fa-solid fa-info"></i>
+			</button>
+			<a
+				href="{base}/directory"
+				class="btn-icon bg-primary-500 text-surface-900 hover:bg-surface-900 hover:text-primary-500 hover:filter-none border"
+				aria-label="list of works"
+			>
+				<i class="fa-solid fa-folder-tree"></i>
+			</a>
+		</div>
 		<section class="mt-2 lg:mt-6">
 			<div class="lg:hidden">
 				<Accordion class="fill-primary-500" padding="pl-0 pr-4 py-2">
