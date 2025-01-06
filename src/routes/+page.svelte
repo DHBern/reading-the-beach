@@ -334,7 +334,7 @@
 	</div>
 </SidebarLayout>
 
-<style>
+<style lang="postcss">
 	:global(.modal article) {
 		@apply overflow-y-scroll max-h-[65vh];
 	}
