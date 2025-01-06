@@ -12,7 +12,7 @@
 
 	const info: ModalSettings = {
 		type: 'alert',
-		body: `<div class="prose dark:prose-inverted">
+		body: `<div class="prose">
 		<p>This atlas was created as a part of our SNSF project on The Beach in the Long Twentieth Century (<a class="anchor" href="https://data.snf.ch/grants/grant/192810" target="_blank">100012_192810 / 1</a>). It links the four individual projects that the team members worked on. The fact that it emerged from these different projects results in the following biases:</p>
 		<ul class="list-disc list-outside ml-4">
 			<li>Since two of our sub-projects explicitly concentrated on the Northern Seas and the Mediterranean respectively, there is an uneven distribution of texts per region. This results in fewer texts set in the Black Atlantic.</li>
@@ -120,15 +120,12 @@
 
 	onMount(async () => {
 		//check whether the cookie is set. if not, show the modal
-		if (!document.cookie.includes('showInfoModal')) {
-			modalStore.trigger(info);
-			//set the cookie to expire in 6 months
-			document.cookie = 'showInfoModal=true; max-age=15552000';
-			await tick();
+		modalStore.trigger({ type: 'component', component: 'intro' });
+		//set the cookie to expire in 6 months
+		await tick();
 
-			//scroll to the top of the modal
-			document.querySelector('.modal-body')?.scrollTo({ top: 0, behavior: 'instant' });
-		}
+		//scroll to the top of the modal
+		document.querySelector('.modal-body')?.scrollTo({ top: 0, behavior: 'instant' });
 	});
 
 	let svgWidth: number;

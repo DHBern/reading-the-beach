@@ -5,9 +5,11 @@
 	import { initializeStores, Modal } from '@skeletonlabs/skeleton';
 	import type { ModalComponent } from '@skeletonlabs/skeleton';
 	import InfoModal from '$lib/InfoModal.svelte';
+	import IntroModal from '$lib/IntroModal.svelte';
 
 	const modalRegistry: Record<string, ModalComponent> = {
-		info: { ref: InfoModal }
+		info: { ref: InfoModal },
+		intro: { ref: IntroModal }
 	};
 
 	initializeStores();

@@ -50,4 +50,47 @@ body {
     '--tw-prose-invert-pre-bg': var();
     '--tw-prose-invert-th-borders': var();
     '--tw-prose-invert-td-borders': var(); */
+	a {
+        @apply anchor;
+    }
+    h1 {
+        @apply h1;
+    }
+    h2 {
+        @apply h2;
+    }
+    h3 {
+        @apply h3;
+    }
+    blockquote {
+        @apply blockquote;
+    }
+    pre {
+        @apply pre;
+    }
+    code {
+        @apply code;
+    }
+    kbd {
+        @apply kbd;
+    }
+    ul {
+        @apply list-inside list-disc space-y-2;
+    }
+    ol {
+        @apply list-inside list-decimal space-y-2;
+    }
+    input[type="radio"] {
+        @apply radio;
+        width: 1rem;
+    }
+    input[type="checkbox"] {
+        @apply checkbox;
+        width: 1rem;
+    }
+    label {
+        p {
+            margin: 2px;
+        }
+    }
 }
