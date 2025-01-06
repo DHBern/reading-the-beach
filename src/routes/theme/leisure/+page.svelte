@@ -13,17 +13,24 @@
 	</a>
 {/snippet}
 
+{#snippet content()}
+	<p>
+		The association of the beach with leisure is a relatively recent phenomenon, which only gained
+		traction in the last quarter of the nineteenth century, when the seaside became more widely
+		accessible. Thus the transformation of the beach into a vacationscape is truly a development of
+		the long twentieth century. This function of the beach has been extraordinarily influential, as
+		shown in our corpus by the surprisingly uniform popularity of leisure as a theme. This suggests
+		that at least in the Western imagination, the beach remains a quintessential holiday
+		destination. As a vacationscape, the beach is a pleasure zone that combines closeness to nature
+		with carefreeness, inspiring visions of departure from routine and the mundane. Leisure often
+		involves play and the sensual experience of nature, but it also means being free for
+		introspection and self-analysis. However, our corpus suggests that it frequently also leads to
+		interpersonal conflict.
+	</p>
+{/snippet}
 <!-- svelte-ignore element_invalid_self_closing_tag -->
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
-		{#snippet content()}
-			<p>
-				The theme "Myth" includes a variety of aspects such as re-writings of classical myths and
-				folklore as well as the appearance of mythological and fantastical creatures. Due to the
-				selection of texts, mermaids, selkies and other merfolk appear more in the Northern Seas and
-				Black Atlantic regions, while the Mediterranean features more rewritings of classical myths.
-			</p>
-		{/snippet}
 		{#snippet buttons()}
 			<ul>
 				<li class="mt-2">

@@ -4,22 +4,21 @@
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 </script>
 
+{#snippet content()}
+	<p>
+		This is the Northern Seas region, encompassing texts set in countries bordering the North Sea,
+		the Baltic Sea, parts of the North Atlantic Ocean, and the Norwegian Sea. Literary scenes here
+		often evoke moods of curiosity, and contemplation, in suspense between happy and melancholic,
+		with prominent events including introspection and encounters . Unlike the exuberant
+		vacationscape of the Mediterranean, leisure in the Northern Seas often involves subtler, more
+		introverted activities. This region also features the most pollution-themed texts, where leisure
+		and pollution frequently appear together. This juxtaposition suggests the enduring idea of the
+		beach as a place of leisure despite the growing visibility of anthropogenic pollution.
+	</p>
+{/snippet}
 <!-- svelte-ignore element_invalid_self_closing_tag -->
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
-		{#snippet content()}
-			<p>
-				This is the Mediterranean region. It includes texts set in southern Europe, Asia Minor, and
-				Northern Africa. The Mediterranean is its function as a holiday destination, but also as a
-				link between north and south, east and west. This is reflected in the events mainly
-				associated with Mediterranean beaches: leisure activities, such as bathing and swimming, but
-				also encounters, arrivals, and departures. Despite the prominence of vacationscape, literary
-				scenes set on Mediterranean beaches are shaped by contemplative and foreboding moods. This
-				suggests that the Mediterranean is an ambivalent space, a site of tension in which different
-				interests grapple with each other and in which carefree holiday atmospheres can quickly tip
-				into something more sinister.
-			</p>
-		{/snippet}
 		{#snippet buttons()}
 			<ul>
 				<li class="mt-2">

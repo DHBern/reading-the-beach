@@ -13,17 +13,22 @@
 	</a>
 {/snippet}
 
+{#snippet content()}
+	<p>
+		Death is a theme that features consistently in literary beach scenes throughout the long
+		twentieth century, illustrating the dual role of the beach as both a site of relaxation and play
+		as well as potential danger. Its transient nature, ideal for hiding traces and obscuring
+		evidence, makes the beach a compelling setting for crime fiction and murder mysteries. The tides
+		can pull people into the water and also wash death ashore, for example in the form of
+		shipwrecked bodies and beached whales. This underscores the agential capacity of the beach in
+		narratives, as well as its ability to foreground issues of increasing relevance, such as
+		environmental degradation and pollution. As such, this theme highlights the function of the
+		beach as a liminal setting where life, death and decay intersect.
+	</p>
+{/snippet}
 <!-- svelte-ignore element_invalid_self_closing_tag -->
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
-		{#snippet content()}
-			<p>
-				The theme "Myth" includes a variety of aspects such as re-writings of classical myths and
-				folklore as well as the appearance of mythological and fantastical creatures. Due to the
-				selection of texts, mermaids, selkies and other merfolk appear more in the Northern Seas and
-				Black Atlantic regions, while the Mediterranean features more rewritings of classical myths.
-			</p>
-		{/snippet}
 		{#snippet buttons()}
 			<ul>
 				<li class="mt-2">

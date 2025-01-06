@@ -13,17 +13,25 @@
 	</a>
 {/snippet}
 
+{#snippet content()}
+	<p>
+		Upon starting this atlas, one of the primary objectives was to determine whether the perception
+		of the beach as site of leisure and holiday had changed throughout the long twentieth century.
+		Considering the growing awareness of global warming and climate change throughout this period,
+		we were curious to see whether this was reflected in literature on the beach. While our findings
+		indicate an increase in descriptions of polluted beaches, particularly from the 2000s onward,
+		the overall number of texts explicitly mentioning pollution is relatively low and even when it
+		does appear, it does not necessarily alter the mood of these scenes significantly.
+		Interestingly, none of the texts in our Mediterranean sample explicitly refer to the pollution
+		of littoral space. This opens up interesting questions concerning the aesthetic and narrative
+		effects of foregrounding or hiding pollution in literary representations. Furthermore, it
+		suggests that despite a slight increase in the depiction of polluted beaches, the perception of
+		the beach as a space of leisure remains largely unchanged.
+	</p>
+{/snippet}
 <!-- svelte-ignore element_invalid_self_closing_tag -->
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
-		{#snippet content()}
-			<p>
-				The theme "Myth" includes a variety of aspects such as re-writings of classical myths and
-				folklore as well as the appearance of mythological and fantastical creatures. Due to the
-				selection of texts, mermaids, selkies and other merfolk appear more in the Northern Seas and
-				Black Atlantic regions, while the Mediterranean features more rewritings of classical myths.
-			</p>
-		{/snippet}
 		{#snippet buttons()}
 			<ul>
 				<li class="mt-2">

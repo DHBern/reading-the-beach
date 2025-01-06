@@ -13,17 +13,23 @@
 	</a>
 {/snippet}
 
+{#snippet content()}
+	<p>
+		The category “Myth” includes a variety of aspects such as re-writings of classical myths and
+		folklore as well as the appearance of mythological and fantastical creatures. In our selection
+		of texts, we found that mermaids, selkies and other merfolk appear more in the Northern Seas and
+		Black Atlantic regions, while the Mediterranean features more rewritings of classical myths.
+		Between the 1950s and the 1990s, myth appears to have disappeared from the shores to resurface
+		with full force in the 21st century. This gap could potentially be explained by the presence of
+		more monstrous figures, e.g. gigantic reptilians, in aquatic settings expressing anxieties on
+		nuclear threats during the mid-twentieth century. Since around the turn of the millennium, there
+		has been a growing interest in rewritings of myth and folklore foregrounding the perspective of
+		women.
+	</p>
+{/snippet}
 <!-- svelte-ignore element_invalid_self_closing_tag -->
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
-		{#snippet content()}
-			<p>
-				The theme "Myth" includes a variety of aspects such as re-writings of classical myths and
-				folklore as well as the appearance of mythological and fantastical creatures. Due to the
-				selection of texts, mermaids, selkies and other merfolk appear more in the Northern Seas and
-				Black Atlantic regions, while the Mediterranean features more rewritings of classical myths.
-			</p>
-		{/snippet}
 		{#snippet buttons()}
 			<ul>
 				<li class="mt-2">

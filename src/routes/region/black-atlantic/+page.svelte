@@ -4,19 +4,23 @@
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
 </script>
 
+{#snippet content()}
+	<p>
+		This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the Americas,
+		and the Caribbean. Here imagined as a geographical region, the Black Atlantic refers to a
+		concept coined by Paul Gilroy. Following Gilroy, the Black Atlantic has to be thought from a
+		transnational and intercultural perspective due to its colonial legacy and the transatlantic
+		slave trade. While this history is omnipresent in our chosen texts, it was surprising to find
+		that the expected themes of migration and death feature only rarely. Instead, we find a
+		continuity of leisure as the main theme, with swimming as the most prominent activity. In line
+		with the other regions, contemplativeness is a prevalent mood on the literary beaches of the
+		Black Atlantic, but it is the juxtaposition of melancholy and playfulness as well as happiness
+		which stands out most.
+	</p>
+{/snippet}
 <!-- svelte-ignore element_invalid_self_closing_tag -->
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
-		{#snippet content()}
-			<p>
-				This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the
-				Americas, and the Caribbean. Here represented as a geographical region, the Black Atlantic
-				refers to a term coined by Paul Gilroy which emphasises the necessity of a transnational and
-				intercultural perspective that takes the colonial legacy into account. Given its history, it
-				was surprising to find the expected themes of migration and death appear rarely in our
-				selection of texts.
-			</p>
-		{/snippet}
 		{#snippet buttons()}
 			<ul>
 				<li class="mt-2">

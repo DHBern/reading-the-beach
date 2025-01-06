@@ -42,9 +42,16 @@
 				{
 					name: 'about',
 					label: 'About',
-					content: `<p>This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the Americas, and the Caribbean. Here represented as a geographical region,
-						the Black Atlantic refers to a term coined by Paul Gilroy which emphasises the necessity of a transnational and intercultural perspective that takes the colonial legacy
-						into account. Given its history, it was surprising to find the expected themes of migration and death appear rarely in our selection of texts.</p>`
+					content: `<p>This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the Americas,
+		and the Caribbean. Here imagined as a geographical region, the Black Atlantic refers to a
+		concept coined by Paul Gilroy. Following Gilroy, the Black Atlantic has to be thought from a
+		transnational and intercultural perspective due to its colonial legacy and the transatlantic
+		slave trade. While this history is omnipresent in our chosen texts, it was surprising to find
+		that the expected themes of migration and death feature only rarely. Instead, we find a
+		continuity of leisure as the main theme, with swimming as the most prominent activity. In line
+		with the other regions, contemplativeness is a prevalent mood on the literary beaches of the
+		Black Atlantic, but it is the juxtaposition of melancholy and playfulness as well as happiness
+		which stands out most.</p>`
 				},
 				{
 					name: 'event',
@@ -81,14 +88,7 @@
 				{
 					name: 'about',
 					label: 'About',
-					content: `<p>This is the Northern Seas region. This region encompasses texts that are set in countries
-						bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean and the
-						Norwegian Sea. For this region, some clear results have been identified. The materiality
-						of the beaches in these texts are often rocky, shingles, fossils, driftwood
-						and plastic.
-						The mood is also characterised
-						by being contemplative, curious,
-						and morbid.</p>`
+					content: `<p>This is the Northern Seas region, encompassing texts set in countries bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean, and the Norwegian Sea. Literary scenes here often evoke moods of curiosity, and contemplation, in suspense between happy and melancholic, with prominent events including introspection and encounters . Unlike the exuberant vacationscape of the Mediterranean, leisure in the Northern Seas often involves subtler, more introverted activities. This region also features the most pollution-themed texts, where leisure and pollution frequently appear together. This juxtaposition suggests the enduring idea of the beach as a place of leisure despite the growing visibility of anthropogenic pollution.</p>`
 				}
 			]
 		}
@@ -107,12 +107,7 @@
 				{
 					name: 'about',
 					label: 'About',
-					content: `<p>This is the Mediterranean region. It includes texts set in southern Europe, Asia Minor, and Northern Africa.
-						The Mediterranean is its function as a holiday destination, but also as a link between north and south, east and west.
-						This is reflected in the events mainly associated with Mediterranean beaches: leisure activities, such as bathing and swimming, but also encounters,
-						arrivals, and departures. Despite the prominence of vacationscape, literary scenes set on Mediterranean beaches are shaped by contemplative and foreboding
-						moods. This suggests that the Mediterranean is an ambivalent space, a site of tension in which different interests grapple with each other and in which
-						carefree holiday atmospheres can quickly tip into something more sinister.</p>`
+					content: `<p>This is the Mediterranean region. It includes texts set in southern Europe, Asia Minor, and Northern Africa. In these texts, the Mediterranean functions as a holiday destination, but also as a link between north and south, east and west. This is reflected in the main events associated with Mediterranean beaches: leisure activities, such as sunbathing and swimming, but also encounters, arrivals, departures, and murder. Despite the fact that vacationscape is a prominent frame for literary scenes set on Mediterranean beaches, the mood is often contemplative or foreboding. This suggests that the Mediterranean is an ambivalent space, a site of tension in which different interests grapple with each other and in which carefree holiday atmospheres can quickly tip into something more sinister.</p>`
 				}
 			]
 		}
