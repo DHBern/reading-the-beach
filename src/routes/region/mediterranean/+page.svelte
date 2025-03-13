@@ -2,6 +2,40 @@
 	import { base } from '$app/paths';
 	import SidebarLayout from '$lib/SidebarLayout.svelte';
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
+	import { onMount, tick } from 'svelte';
+	import type { ModalSettings } from '@skeletonlabs/skeleton';
+	import { getModalStore } from '@skeletonlabs/skeleton';
+
+	const modalStore = getModalStore();
+
+	const mediterraneanInfo: ModalSettings = {
+		type: 'component',
+		component: 'info',
+		title: 'Mediterranean',
+		meta: {
+			region: 'mediterranean',
+			btnClasses:
+				'btn border bg-tertiary-500 text-surface-900 hover:bg-surface-900 hover:text-tertiary-500 hover:filter-none',
+			color: 'tertiary-500',
+			tabs: [
+				{
+					name: 'about',
+					label: 'About',
+					content: `<p>This is the Mediterranean region. It includes texts set in southern Europe, Asia Minor, and Northern Africa. In these texts, the Mediterranean functions as a holiday destination, but also as a link between north and south, east and west. This is reflected in the main events associated with Mediterranean beaches: leisure activities, such as sunbathing and swimming, but also encounters, arrivals, departures, and murder. Despite the fact that vacationscape is a prominent frame for literary scenes set on Mediterranean beaches, the mood is often contemplative or foreboding. This suggests that the Mediterranean is an ambivalent space, a site of tension in which different interests grapple with each other and in which carefree holiday atmospheres can quickly tip into something more sinister.</p>`
+				}
+			]
+		}
+	};
+
+	onMount(async () => {
+		//check whether the cookie is set. if not, show the modal
+		modalStore.trigger(mediterraneanInfo);
+		//set the cookie to expire in 6 months
+		await tick();
+
+		//scroll to the top of the modal
+		document.querySelector('.modal-body')?.scrollTo({ top: 0, behavior: 'instant' });
+	});
 </script>
 
 {#snippet content()}

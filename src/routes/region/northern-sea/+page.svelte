@@ -2,6 +2,40 @@
 	import { base } from '$app/paths';
 	import SidebarLayout from '$lib/SidebarLayout.svelte';
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
+	import { onMount, tick } from 'svelte';
+	import type { ModalSettings } from '@skeletonlabs/skeleton';
+	import { getModalStore } from '@skeletonlabs/skeleton';
+
+	const modalStore = getModalStore();
+
+	const northernInfo: ModalSettings = {
+		type: 'component',
+		component: 'info',
+		title: 'Northern Seas',
+		meta: {
+			region: 'northern-sea',
+			btnClasses:
+				'btn border bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500',
+			color: 'quarternary-500',
+			tabs: [
+				{
+					name: 'about',
+					label: 'About',
+					content: `<p>This is the Northern Seas region, encompassing texts set in countries bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean, and the Norwegian Sea. Literary scenes here often evoke moods of curiosity, and contemplation, in suspense between happy and melancholic, with prominent events including introspection and encounters . Unlike the exuberant vacationscape of the Mediterranean, leisure in the Northern Seas often involves subtler, more introverted activities. This region also features the most pollution-themed texts, where leisure and pollution frequently appear together. This juxtaposition suggests the enduring idea of the beach as a place of leisure despite the growing visibility of anthropogenic pollution.</p>`
+				}
+			]
+		}
+	};
+
+	onMount(async () => {
+		//check whether the cookie is set. if not, show the modal
+		modalStore.trigger(northernInfo);
+		//set the cookie to expire in 6 months
+		await tick();
+
+		//scroll to the top of the modal
+		document.querySelector('.modal-body')?.scrollTo({ top: 0, behavior: 'instant' });
+	});
 </script>
 
 {#snippet content()}
