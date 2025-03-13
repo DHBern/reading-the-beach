@@ -24,15 +24,15 @@
 			angles:
 		</p>
 		<ul class="!list-disc !list-outside ml-4">
-			<li>a temporal slider shows historical developments,</li>
+			<li>a temporal slider shows historical developments</li>
 			<li>
 				texts can be grouped according to categories such as agents, events, genre, materiality, and
-				mood,
+				mood
 			</li>
-			<li>regional maps illustrate the specificities of three model regions,</li>
+			<li>regional maps illustrate the specificities of three model regions</li>
 			<li>
 				thematic maps visualise the geographical distribution of five overarching themes we have
-				identified,
+				identified
 			</li>
 		</ul>
 		<TabGroup border="border-b border-primary-500">
@@ -59,4 +59,9 @@
 		</TabGroup>
 		<p>Enter and embark on a journey to the beaches of the literary world!</p>
 	</article>
+	<div class="flex justify-center">
+		<button on:click={() => modalStore.close()} class="btn border btn-primary-500">
+			Enter Atlas
+		</button>
+	</div>
 </div>
