@@ -11,22 +11,36 @@
 	const modalStore = getModalStore();
 
 	const info: ModalSettings = {
-		type: 'alert',
-		body: `<div class="prose">
-		<p>This atlas was created as a part of our SNSF project on The Beach in the Long Twentieth Century (<a class="anchor" href="https://data.snf.ch/grants/grant/192810" target="_blank">100012_192810 / 1</a>). It links the four individual projects that the team members worked on. The fact that it emerged from these different projects results in the following biases:</p>
-		<ul class="list-disc list-outside ml-4">
-			<li>Since two of our sub-projects explicitly concentrated on the Northern Seas and the Mediterranean respectively, there is an uneven distribution of texts per region. This results in fewer texts set in the Black Atlantic.</li>
-			<li>While we aimed to offer a representative sample of texts from the period of the long twentieth century, despite the fact that three of our sub-projects focus on the second half of the century, the temporal distribution of texts varies. This might partly also be due to the fluctuating popularity of the beach as a literary setting across the twentieth century.</li>
-			<li>Only one sub-project focuses on nonfictional texts, which results in an overrepresentation of these texts in the Northern Seas region.</li>
-			<li>The project mainly explored anglophone literature, but individual sub-projects also have a comparative perspective, which is reflected in our corpus.</li>
-		</ul>
-		<p><i>Guðrun í Jákupsstovu</i> is a PhD candidate in the project. Her dissertation examines contemporary British and Scandinavian nature writing texts that portray “encounters with time” in littoral spaces, such as beaches, coasts, and islands and explores how these enable temporal experiences and understandings in relation to climate change. For the atlas, she explores how pollution and climate change are reflected in the coastal environments of her texts, as well as the role of myth in tandem with these topics.</p>
-		<p><i>Ursula Kluwick</i> is Senior Researcher in the project. She specialises in representations of water and the beach, and her book <a class="anchor" href="https://www.upress.virginia.edu/title/5983/" target="_blank">Haunting Ecologies: Victorian Water Writing</a> is just out with the University of Virginia Press (2024). Her current book project deals with the representation of the Mediterranean beach since the 1950s, and her selection of texts for the atlas shows the wealth of themes associated with this region, particularly leisure, migration and exile, and myth.</p>
-		<p><i>Virginia Richter</i> is the PI of the project. She has a longstanding interest in the beach and together with Ursula Kluwick, she organised an early conference (2009) and edited <a class="anchor" href="https://www.routledge.com/The-Beach-in-Anglophone-Literatures-and-Cultures-Reading-Littoral-Space/Kluwick-Richter/p/book/9780367880965?srsltid=AfmBOor8_ZkeUDKWBj5TuPKOV29ApfgHfKtIDk84K5oTYxVf3mbRHXC-" target="_blank">The Beach in Anglophone Literatures and Cultures</a> (Ashgate 2015), one of the first collections on this topic. Her current project approaches the beach in modernist literature from a comparative perspective, and she is also writing a field guide to littoral studies. For the atlas, Virginia selected texts from the first half of the long twentieth century.</p>
-		<p><i>Marion Troxler</i> is a PhD candidate in the project. Her thesis explores how reading the beach together with merfolk, given their shared hybrid and metamorphic qualities, provides insights into their potential for resisting hegemonic dualistic hierarchies. Her selection of texts highlights the changing role of mermaids, selkies, Mami Wata, and other related figures over the long 20th century, especially in regard to patriarchal and (post-)colonial structures.</p>
-		</div>
-		`,
-		buttonTextCancel: 'Close'
+		type: 'component',
+		component: 'info',
+		title: 'Info',
+		meta: {
+			btnClasses: 'btn border btn-primary-500',
+			color: 'secondary-500',
+			tabs: [
+				{
+					name: 'project',
+					label: 'Project',
+					content: `<div class="prose">
+					<p>This atlas was created as a part of our SNSF project on The Beach in the Long Twentieth Century (<a class="anchor" href="https://data.snf.ch/grants/grant/192810" target="_blank">100012_192810 / 1</a>). It links the four individual projects that the team members worked on. The fact that it emerged from these different projects results in the following biases:</p>
+					<ul class="list-disc list-outside ml-4">
+						<li>Since two of our sub-projects explicitly concentrated on the Northern Seas and the Mediterranean respectively, there is an uneven distribution of texts per region. This results in fewer texts set in the Black Atlantic.</li>
+						<li>While we aimed to offer a representative sample of texts from the period of the long twentieth century, despite the fact that three of our sub-projects focus on the second half of the century, the temporal distribution of texts varies. This might partly also be due to the fluctuating popularity of the beach as a literary setting across the twentieth century.</li>
+						<li>Only one sub-project focuses on nonfictional texts, which results in an overrepresentation of these texts in the Northern Seas region.</li>
+						<li>The project mainly explored anglophone literature, but individual sub-projects also have a comparative perspective, which is reflected in our corpus.</li>
+					</ul>
+					</div>`
+				},
+				{
+					name: 'team',
+					label: 'Team',
+					content: `<div class="prose"><p><i>Guðrun í Jákupsstovu</i> is a PhD candidate in the project. Her dissertation examines contemporary British and Scandinavian nature writing texts that portray “encounters with time” in littoral spaces, such as beaches, coasts, and islands and explores how these enable temporal experiences and understandings in relation to climate change. For the atlas, she explores how pollution and climate change are reflected in the coastal environments of her texts, as well as the role of myth in tandem with these topics.</p>
+					<p><i>Ursula Kluwick</i> is Senior Researcher in the project. She specialises in representations of water and the beach, and her book <a class="anchor" href="https://www.upress.virginia.edu/title/5983/" target="_blank">Haunting Ecologies: Victorian Water Writing</a> is just out with the University of Virginia Press (2024). Her current book project deals with the representation of the Mediterranean beach since the 1950s, and her selection of texts for the atlas shows the wealth of themes associated with this region, particularly leisure, migration and exile, and myth.</p>
+					<p><i>Virginia Richter</i> is the PI of the project. She has a longstanding interest in the beach and together with Ursula Kluwick, she organised an early conference (2009) and edited <a class="anchor" href="https://www.routledge.com/The-Beach-in-Anglophone-Literatures-and-Cultures-Reading-Littoral-Space/Kluwick-Richter/p/book/9780367880965?srsltid=AfmBOor8_ZkeUDKWBj5TuPKOV29ApfgHfKtIDk84K5oTYxVf3mbRHXC-" target="_blank">The Beach in Anglophone Literatures and Cultures</a> (Ashgate 2015), one of the first collections on this topic. Her current project approaches the beach in modernist literature from a comparative perspective, and she is also writing a field guide to littoral studies. For the atlas, Virginia selected texts from the first half of the long twentieth century.</p>
+					<p><i>Marion Troxler</i> is a PhD candidate in the project. Her thesis explores how reading the beach together with merfolk, given their shared hybrid and metamorphic qualities, provides insights into their potential for resisting hegemonic dualistic hierarchies. Her selection of texts highlights the changing role of mermaids, selkies, Mami Wata, and other related figures over the long 20th century, especially in regard to patriarchal and (post-)colonial structures.</p></div>`
+				}
+			]
+		}
 	};
 
 	const atlanticInfo: ModalSettings = {

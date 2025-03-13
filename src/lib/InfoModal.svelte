@@ -55,13 +55,22 @@
 					{/if}
 				</svelte:fragment>
 			</TabGroup>
-			<a
-				href="{base}/region/{$modalStore[0].meta.region}"
-				class="{$modalStore[0].meta.btnClasses} self-center mt-5"
-				on:click={() => modalStore.close()}
-			>
-				Enter region
-			</a>
+			{#if $modalStore[0].meta.region}
+				<a
+					href="{base}/region/{$modalStore[0].meta.region}"
+					class="{$modalStore[0].meta.btnClasses} self-center mt-5"
+					on:click={() => modalStore.close()}
+				>
+					Enter region
+				</a>
+			{:else}
+				<button
+					on:click={() => modalStore.close()}
+					class="{$modalStore[0].meta.btnClasses} self-center mt-5"
+				>
+					Close
+				</button>
+			{/if}
 		</article>
 	{/if}
 </div>
