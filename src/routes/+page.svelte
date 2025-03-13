@@ -141,60 +141,61 @@
 	let svgHeight: number;
 </script>
 
+{#snippet button(href: string, baseColor: string, hoverColor: string, text: string, map = false)}
+	<a
+		{href}
+		class="btn border bg-{baseColor} text-{hoverColor} hover:bg-{hoverColor} hover:text-{baseColor} hover:filter-none {map
+			? `origin-top-left pointer-events-auto `
+			: ``}"
+		style={map ? `transform: scale(calc(1 / var(--scaling)));` : ``}
+	>
+		{text}
+	</a>
+{/snippet}
+{#snippet atlanticButton(map: boolean = false)}
+	{@render button(
+		`${base}/region/black-atlantic`,
+		`secondary-500`,
+		`surface-900`,
+		`Black Atlantic`,
+		map
+	)}
+{/snippet}
+{#snippet mediterraneanButton(map: boolean = false)}
+	{@render button(
+		`${base}/region/mediterranean`,
+		`tertiary-500`,
+		`surface-900`,
+		`Mediterranean`,
+		map
+	)}
+{/snippet}
+{#snippet northernButton(map: boolean = false)}
+	{@render button(
+		`${base}/region/northern-sea`,
+		`quarternary-500`,
+		`surface-900`,
+		`Northern Seas`,
+		map
+	)}
+{/snippet}
+{#snippet deathButton()}
+	{@render button(`${base}/theme/death`, `surface-900`, `primary-500`, `death`)}
+{/snippet}
+{#snippet leisureButton()}
+	{@render button(`${base}/theme/leisure`, `surface-900`, `primary-500`, `leisure`)}
+{/snippet}
+{#snippet migrationButton()}
+	{@render button(`${base}/theme/migration`, `surface-900`, `primary-500`, `migration and exile`)}
+{/snippet}
+{#snippet mythButton()}
+	{@render button(`${base}/theme/myth`, `surface-900`, `primary-500`, `myth`)}
+{/snippet}
+{#snippet pollutionButton()}
+	{@render button(`${base}/theme/pollution`, `surface-900`, `primary-500`, `pollution`)}
+{/snippet}
 <SidebarLayout>
 	<svelte:fragment slot="sidebar">
-		{#snippet button(href: string, baseColor: string, hoverColor: string, text: string)}
-			<a
-				{href}
-				class="btn border bg-{baseColor} text-{hoverColor} hover:bg-{hoverColor} hover:text-{baseColor} hover:filter-none"
-			>
-				{text}
-			</a>
-		{/snippet}
-		{#snippet atlanticButton()}
-			{@render button(
-				`${base}/region/black-atlantic`,
-				`secondary-500`,
-				`surface-900`,
-				`Black Atlantic`
-			)}
-		{/snippet}
-		{#snippet mediterraneanButton()}
-			{@render button(
-				`${base}/region/mediterranean`,
-				`tertiary-500`,
-				`surface-900`,
-				`Mediterranean`
-			)}
-		{/snippet}
-		{#snippet northernButton()}
-			{@render button(
-				`${base}/region/northern-sea`,
-				`quarternary-500`,
-				`surface-900`,
-				`Northern Seas`
-			)}
-		{/snippet}
-		{#snippet deathButton()}
-			{@render button(`${base}/theme/death`, `surface-900`, `primary-500`, `death`)}
-		{/snippet}
-		{#snippet leisureButton()}
-			{@render button(`${base}/theme/leisure`, `surface-900`, `primary-500`, `leisure`)}
-		{/snippet}
-		{#snippet migrationButton()}
-			{@render button(
-				`${base}/theme/migration`,
-				`surface-900`,
-				`primary-500`,
-				`migration and exile`
-			)}
-		{/snippet}
-		{#snippet mythButton()}
-			{@render button(`${base}/theme/myth`, `surface-900`, `primary-500`, `myth`)}
-		{/snippet}
-		{#snippet pollutionButton()}
-			{@render button(`${base}/theme/pollution`, `surface-900`, `primary-500`, `pollution`)}
-		{/snippet}
 		<p>An Interactive Atlas of Beach Narratives</p>
 		<div class="flex gap-2 mt-4">
 			<button
@@ -300,13 +301,7 @@
 				></polygon>
 			</a>
 			<foreignObject x="1600" y="1900" width="660" height="250" class="pointer-events-none">
-				{#if svgWidth}<button
-						on:click={() => modalStore.trigger(atlanticInfo)}
-						class="pointer-events-auto btn border bg-secondary-500 text-surface-900 hover:bg-surface-900 hover:text-secondary-500 hover:filter-none origin-top-left"
-						style="transform: scale(calc(1 / var(--scaling)));"
-					>
-						Black Atlantic
-					</button>{/if}
+				{#if svgWidth}{@render atlanticButton(true)}{/if}
 			</foreignObject>
 			<a class="anchor" href="{base}/region/mediterranean" aria-label="Mediterranean">
 				<polygon
@@ -315,13 +310,7 @@
 				></polygon>
 			</a>
 			<foreignObject x="2300" y="1650" width="700" height="250" class="pointer-events-none">
-				{#if svgWidth}<button
-						on:click={() => modalStore.trigger(mediterraneanInfo)}
-						class="pointer-events-auto btn border bg-tertiary-500 text-surface-900 hover:bg-surface-900 hover:text-tertiary-500 hover:filter-none origin-top-left"
-						style="transform: scale(calc(1 / var(--scaling)));"
-					>
-						Mediterranean
-					</button>{/if}
+				{#if svgWidth}{@render mediterraneanButton(true)}{/if}
 			</foreignObject>
 			<a class="anchor" href="{base}/region/northern-sea" aria-label="Northern Seas">
 				<polygon
@@ -330,13 +319,7 @@
 				></polygon>
 			</a>
 			<foreignObject x="1800" y="1400" width="660" height="250" class="pointer-events-none">
-				{#if svgWidth}<button
-						on:click={() => modalStore.trigger(northernInfo)}
-						class="pointer-events-auto btn border bg-quarternary-500 text-surface-900 hover:bg-surface-900 hover:text-quarternary-500 hover:filter-none origin-top-left"
-						style="transform: scale(calc(1 / var(--scaling)));"
-					>
-						Northern Seas
-					</button>{/if}
+				{#if svgWidth}{@render northernButton(true)}{/if}
 			</foreignObject>
 		</svg>
 	</div>
