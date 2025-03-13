@@ -2,6 +2,67 @@
 	import { base } from '$app/paths';
 	import SidebarLayout from '$lib/SidebarLayout.svelte';
 	import { Accordion, AccordionItem } from '@skeletonlabs/skeleton';
+	import { onMount, tick } from 'svelte';
+	import type { ModalSettings } from '@skeletonlabs/skeleton';
+	import { getModalStore } from '@skeletonlabs/skeleton';
+
+	const modalStore = getModalStore();
+
+	const leisureInfo: ModalSettings = {
+		type: 'component',
+		component: 'info',
+		title: 'Black Atlantic',
+		meta: {
+			region: 'black-atlantic',
+			btnClasses:
+				'btn border bg-secondary-500 text-surface-900 hover:bg-surface-900 hover:text-secondary-500 hover:filter-none',
+			color: 'secondary-500',
+			tabs: [
+				{
+					name: 'about',
+					label: 'About',
+					content: `<p>This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the Americas,
+	and the Caribbean. Here imagined as a geographical region, the Black Atlantic refers to a
+	concept coined by Paul Gilroy. Following Gilroy, the Black Atlantic has to be thought from a
+	transnational and intercultural perspective due to its colonial legacy and the transatlantic
+	slave trade. While this history is omnipresent in our chosen texts, it was surprising to find
+	that the expected themes of migration and death feature only rarely. Instead, we find a
+	continuity of leisure as the main theme, with swimming as the most prominent activity. In line
+	with the other regions, contemplativeness is a prevalent mood on the literary beaches of the
+	Black Atlantic, but it is the juxtaposition of melancholy and playfulness as well as happiness
+	which stands out most.</p>`
+				},
+				{
+					name: 'event',
+					label: 'Event',
+					bars: [
+						{
+							label: 'Contemplative',
+							value: 9
+						},
+						{
+							label: 'Morbid',
+							value: 5
+						},
+						{
+							label: 'Curious',
+							value: 3
+						}
+					]
+				}
+			]
+		}
+	};
+
+	onMount(async () => {
+		//check whether the cookie is set. if not, show the modal
+		modalStore.trigger(leisureInfo);
+		//set the cookie to expire in 6 months
+		await tick();
+
+		//scroll to the top of the modal
+		document.querySelector('.modal-body')?.scrollTo({ top: 0, behavior: 'instant' });
+	});
 </script>
 
 {#snippet button(href: string, baseColor: string, hoverColor: string, text: string)}
