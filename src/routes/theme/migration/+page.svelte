@@ -11,12 +11,11 @@
 	const migrationInfo: ModalSettings = {
 		type: 'component',
 		component: 'info',
-		title: 'Black Atlantic',
+		title: 'Death',
 		meta: {
-			region: 'black-atlantic',
 			btnClasses:
-				'btn border bg-secondary-500 text-surface-900 hover:bg-surface-900 hover:text-secondary-500 hover:filter-none',
-			color: 'secondary-500',
+				'btn border bg-surface-900 text-primary-500 hover:bg-primary-500 hover:text-surface-900 hover:filter-none',
+			color: 'primary-500',
 			tabs: [
 				{
 					name: 'about',
