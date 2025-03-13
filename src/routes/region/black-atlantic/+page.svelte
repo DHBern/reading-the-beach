@@ -47,6 +47,10 @@
 						{
 							label: 'Curious',
 							value: 3
+						},
+						{
+							label: 'Test',
+							value: 12
 						}
 					]
 				}
