@@ -32,19 +32,98 @@
 	which stands out most.</p>`
 				},
 				{
-					name: 'event',
-					label: 'Event',
+					name: 'regions',
+					label: 'Regions',
 					bars: [
 						{
-							label: 'Contemplative',
+							label: 'Northern Seas',
 							value: 9
 						},
 						{
-							label: 'Morbid',
+							label: 'Mediterranean',
+							value: 7
+						},
+						{
+							label: 'Black Atlantic',
+							value: 2
+						}
+					]
+				},
+				{
+					name: 'moods',
+					label: 'Moods',
+					bars: [
+						{
+							label: 'Sad',
+							value: 7
+						},
+						{
+							label: 'Uncanny',
+							value: 6
+						},
+						{
+							label: 'Contemplative',
+							value: 6
+						},
+						{
+							label: 'Foreboding',
+							value: 6
+						},
+						{
+							label: 'Melancholic',
+							value: 5
+						}
+					]
+				}
+				,
+				{
+					name: 'events',
+					label: 'Events',
+					bars: [
+						{
+							label: 'Encounter',
+							value: 9
+						},
+						{
+							label: 'Departure/Arrival',
+							value: 7
+						},
+						{
+							label: 'Transformation',
+							value: 6
+						},
+						{
+							label: 'Conversationn',
 							value: 5
 						},
 						{
-							label: 'Curious',
+							label: 'Bathing/Swimming',
+							value: 4
+						}
+					]
+				},
+				{
+					name: 'agents',
+					label: 'Agents',
+					bars: [
+						{
+							label: 'Human',
+							value: 15
+						},
+						{
+							label: 'Aquatic',
+							value: 7
+						},
+						{
+							label: 'Weather',
+							value: 4
+						},
+						{
+							label: 'Nonhuman',
+							value: 5
+						},
+						{
+							label: 'Mythical',
 							value: 3
 						}
 					]

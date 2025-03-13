@@ -32,20 +32,107 @@
 	which stands out most.</p>`
 				},
 				{
-					name: 'event',
-					label: 'Event',
+					name: 'regions',
+					label: 'Regions',
 					bars: [
 						{
-							label: 'Contemplative',
-							value: 9
+							label: 'Northern Seas',
+							value: 18
 						},
 						{
-							label: 'Morbid',
-							value: 5
+							label: 'Mediterranean',
+							value: 6
+						},
+						{
+							label: 'Black Atlantic',
+							value: 7
+						}
+					]
+				},
+				{
+					name: 'moods',
+					label: 'Moods',
+					bars: [
+						{
+							label: 'Suspenseful',
+							value: 15
+						},
+						{
+							label: 'Melancholic',
+							value: 14
+						},
+						{
+							label: 'Sinister',
+							value: 12
+						},
+						{
+							label: 'Playful',
+							value: 12
 						},
 						{
 							label: 'Curious',
-							value: 3
+							value: 11
+						},
+						{
+							label: 'Foreboding',
+							value: 11
+						},
+						{
+							label: 'Contemplative',
+							value: 11
+						}
+					]
+				}
+				,
+				{
+					name: 'events',
+					label: 'Events',
+					bars: [
+						{
+							label: 'Encounter',
+							value: 18
+						},
+						{
+							label: 'Departure/Arrival',
+							value: 10
+						},
+						{
+							label: 'Conversation',
+							value: 10
+						},
+						{
+							label: 'Death',
+							value: 10
+						},
+						{
+							label: 'Introspection/Contemplation',
+							value: 9
+						}
+					]
+				},
+				{
+					name: 'agents',
+					label: 'Agents',
+					bars: [
+						{
+							label: 'Human',
+							value: 27
+						},
+						{
+							label: 'Mythical',
+							value: 19
+						},
+						{
+							label: 'Aquatic',
+							value: 18
+						},
+						{
+							label: 'Weather',
+							value: 9
+						},
+						{
+							label: 'Nonhuman',
+							value: 8
 						}
 					]
 				}
