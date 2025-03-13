@@ -22,6 +22,85 @@
 					name: 'about',
 					label: 'About',
 					content: `<p>This is the Mediterranean region. It includes texts set in southern Europe, Asia Minor, and Northern Africa. In these texts, the Mediterranean functions as a holiday destination, but also as a link between north and south, east and west. This is reflected in the main events associated with Mediterranean beaches: leisure activities, such as sunbathing and swimming, but also encounters, arrivals, departures, and murder. Despite the fact that vacationscape is a prominent frame for literary scenes set on Mediterranean beaches, the mood is often contemplative or foreboding. This suggests that the Mediterranean is an ambivalent space, a site of tension in which different interests grapple with each other and in which carefree holiday atmospheres can quickly tip into something more sinister.</p>`
+				},
+				{
+					name: 'themes',
+					label: 'Themes',
+					bars: [
+						{
+							label: 'Myth',
+							value: 6
+						},
+						{
+							label: 'Migration and Exile',
+							value: 7
+						},
+						{
+							label: 'Death',
+							value: 14
+						},
+						{
+							label: 'Leisure',
+							value: 15
+						},
+						{
+							label: 'Pollution',
+							value: 0
+						}
+					]
+				}
+				,
+				{
+					name: 'events',
+					label: 'Events',
+					bars: [
+						{
+							label: 'Bathing/Swimming',
+							value: 12
+						},
+						{
+							label: 'Encounter',
+							value: 9
+						},
+						{
+							label: 'Sunbathing',
+							value: 6
+						},
+						{
+							label: 'Murder',
+							value: 5
+						},
+						{
+							label: 'Departure/Arrival',
+							value: 5
+						}
+					]
+				},
+				{
+					name: 'moods',
+					label: 'Moods',
+					bars: [
+						{
+							label: 'Contemplative',
+							value: 9
+						},
+						{
+							label: 'Foreboding',
+							value: 9
+						},
+						{
+							label: 'Sinister',
+							value: 7
+						},
+						{
+							label: 'Idyllic',
+							value: 7
+						},
+						{
+							label: 'Happy',
+							value: 6
+						}
+					]
 				}
 			]
 		}

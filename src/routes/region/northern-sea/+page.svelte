@@ -22,6 +22,85 @@
 					name: 'about',
 					label: 'About',
 					content: `<p>This is the Northern Seas region, encompassing texts set in countries bordering the North Sea, the Baltic Sea, parts of the North Atlantic Ocean, and the Norwegian Sea. Literary scenes here often evoke moods of curiosity, and contemplation, in suspense between happy and melancholic, with prominent events including introspection and encounters . Unlike the exuberant vacationscape of the Mediterranean, leisure in the Northern Seas often involves subtler, more introverted activities. This region also features the most pollution-themed texts, where leisure and pollution frequently appear together. This juxtaposition suggests the enduring idea of the beach as a place of leisure despite the growing visibility of anthropogenic pollution.</p>`
+				},
+				{
+					name: 'themes',
+					label: 'Themes',
+					bars: [
+						{
+							label: 'Myth',
+							value: 18
+						},
+						{
+							label: 'Migration and Exile',
+							value: 9
+						},
+						{
+							label: 'Death',
+							value: 29
+						},
+						{
+							label: 'Leisure',
+							value: 46
+						},
+						{
+							label: 'Pollution',
+							value: 10
+						}
+					]
+				}
+				,
+				{
+					name: 'events',
+					label: 'Events',
+					bars: [
+						{
+							label: 'Encounter',
+							value: 26
+						},
+						{
+							label: 'Introspection/Contemplation',
+							value: 25
+						},
+						{
+							label: 'Conversation',
+							value: 21
+						},
+						{
+							label: 'Bathing/Swimming',
+							value: 21
+						},
+						{
+							label: 'Walking',
+							value: 17
+						}
+					]
+				},
+				{
+					name: 'moods',
+					label: 'Moods',
+					bars: [
+						{
+							label: 'Contemplative',
+							value: 28
+						},
+						{
+							label: 'Curious',
+							value: 25
+						},
+						{
+							label: 'Melancholic',
+							value: 20
+						},
+						{
+							label: 'Suspenseful',
+							value: 20
+						},
+						{
+							label: 'Happy',
+							value: 18
+						}
+					]
 				}
 			]
 		}

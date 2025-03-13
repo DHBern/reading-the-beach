@@ -33,24 +33,81 @@
 	which stands out most.</p>`
 				},
 				{
-					name: 'event',
-					label: 'Event',
+					name: 'themes',
+					label: 'Themes',
 					bars: [
 						{
-							label: 'Contemplative',
-							value: 9
+							label: 'Myth',
+							value: 7
 						},
 						{
-							label: 'Morbid',
+							label: 'Migration and Exile',
+							value: 2
+						},
+						{
+							label: 'Death',
+							value: 2
+						},
+						{
+							label: 'Leisure',
+							value: 7
+						},
+						{
+							label: 'Pollution',
+							value: 2
+						}
+					]
+				}
+				,
+				{
+					name: 'events',
+					label: 'Events',
+					bars: [
+						{
+							label: 'Bathing/Swimming',
+							value: 7
+						},
+						{
+							label: 'Encounter',
 							value: 5
 						},
 						{
-							label: 'Curious',
+							label: 'Departure/Arrival',
 							value: 3
 						},
 						{
-							label: 'Test',
-							value: 12
+							label: 'Conversation',
+							value: 3
+						},
+						{
+							label: 'Conflict',
+							value: 3
+						}
+					]
+				},
+				{
+					name: 'moods',
+					label: 'Moods',
+					bars: [
+						{
+							label: 'Contemplative',
+							value: 6
+						},
+						{
+							label: 'Melancholic',
+							value: 5
+						},
+						{
+							label: 'Happy',
+							value: 5
+						},
+						{
+							label: 'Playful',
+							value: 5
+						},
+						{
+							label: 'Suspenseful',
+							value: 4
 						}
 					]
 				}
