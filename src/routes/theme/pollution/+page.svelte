@@ -37,15 +37,15 @@
 					bars: [
 						{
 							label: 'Northern Seas',
-							value: 18
+							value: 10
 						},
 						{
 							label: 'Mediterranean',
-							value: 6
+							value: 0
 						},
 						{
 							label: 'Black Atlantic',
-							value: 7
+							value: 2
 						}
 					]
 				},
@@ -54,32 +54,24 @@
 					label: 'Moods',
 					bars: [
 						{
-							label: 'Suspenseful',
-							value: 15
-						},
-						{
-							label: 'Melancholic',
-							value: 14
-						},
-						{
-							label: 'Sinister',
-							value: 12
-						},
-						{
-							label: 'Playful',
-							value: 12
-						},
-						{
 							label: 'Curious',
-							value: 11
-						},
-						{
-							label: 'Foreboding',
-							value: 11
+							value: 5
 						},
 						{
 							label: 'Contemplative',
-							value: 11
+							value: 5
+						},
+						{
+							label: 'Catastrophic',
+							value: 4
+						},
+						{
+							label: 'Sad',
+							value: 3
+						},
+						{
+							label: 'Neutral',
+							value: 3
 						}
 					]
 				}
@@ -90,23 +82,23 @@
 					bars: [
 						{
 							label: 'Encounter',
-							value: 18
-						},
-						{
-							label: 'Departure/Arrival',
-							value: 10
-						},
-						{
-							label: 'Conversation',
-							value: 10
-						},
-						{
-							label: 'Death',
 							value: 10
 						},
 						{
 							label: 'Introspection/Contemplation',
-							value: 9
+							value: 5
+						},
+						{
+							label: 'Bathing/Swimming',
+							value: 4
+						},
+						{
+							label: 'Departure/Arrival',
+							value: 3
+						},
+						{
+							label: 'Gazing',
+							value: 3
 						}
 					]
 				},
@@ -116,23 +108,23 @@
 					bars: [
 						{
 							label: 'Human',
-							value: 27
-						},
-						{
-							label: 'Mythical',
-							value: 19
+							value: 8
 						},
 						{
 							label: 'Aquatic',
-							value: 18
-						},
-						{
-							label: 'Weather',
-							value: 9
+							value: 8
 						},
 						{
 							label: 'Nonhuman',
 							value: 8
+						},
+						{
+							label: 'Matter',
+							value: 6
+						},
+						{
+							label: 'Weather',
+							value: 3
 						}
 					]
 				}
