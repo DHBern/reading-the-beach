@@ -30,7 +30,7 @@
 									null,
 									currentTab?.bars.map((b: { value: any }) => b.value)
 								)}
-								{@const barwidth = Math.max(3, Math.min(50, 150 / maxBars))}
+								{@const barwidth = Math.round(Math.max(3, Math.min(50, 150 / maxBars)))}
 								{@const gap = 5}
 								<dt class="text-sm font-bold">{bar.label}</dt>
 								<dd class="text-sm">
@@ -38,6 +38,7 @@
 										viewBox="0 0 {(barwidth + gap) * maxBars} 50"
 										style="color: rgba(var(--color-{$modalStore[0]?.meta?.color}) / 1)"
 										class="max-h-full max-w-full h-12"
+										shape-rendering="crispEdges"
 									>
 										{#each { length: bar.value } as _, i}
 											<rect
