@@ -26,16 +26,16 @@
 					{#if currentTab?.bars}
 						<dl class="grid grid-cols-[200px_1fr] gap-2 place-items-baseline">
 							{#each currentTab?.bars || [] as bar}
-								{@const barwidth = 20}
+								{@const maxBars = Math.max.apply(
+									null,
+									currentTab?.bars.map((b: { value: any }) => b.value)
+								)}
+								{@const barwidth = Math.max(3, Math.min(50, 150 / maxBars))}
 								{@const gap = 5}
 								<dt class="text-sm font-bold">{bar.label}</dt>
 								<dd class="text-sm">
 									<svg
-										viewBox="0 0 {(barwidth + gap) *
-											Math.max.apply(
-												null,
-												currentTab?.bars.map((b) => b.value)
-											)} 50"
+										viewBox="0 0 {(barwidth + gap) * maxBars} 50"
 										style="color: rgba(var(--color-{$modalStore[0]?.meta?.color}) / 1)"
 										class="max-h-full max-w-full h-12"
 									>
