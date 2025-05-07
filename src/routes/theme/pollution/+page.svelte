@@ -11,7 +11,7 @@
 	const pollutionInfo: ModalSettings = {
 		type: 'component',
 		component: 'info',
-		title: 'Death',
+		title: 'Pollution',
 		meta: {
 			btnClasses:
 				'btn border bg-surface-900 text-primary-500 hover:bg-primary-500 hover:text-surface-900 hover:filter-none',
@@ -20,16 +20,9 @@
 				{
 					name: 'about',
 					label: 'About',
-					content: `<p>This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the Americas,
-	and the Caribbean. Here imagined as a geographical region, the Black Atlantic refers to a
-	concept coined by Paul Gilroy. Following Gilroy, the Black Atlantic has to be thought from a
-	transnational and intercultural perspective due to its colonial legacy and the transatlantic
-	slave trade. While this history is omnipresent in our chosen texts, it was surprising to find
-	that the expected themes of migration and death feature only rarely. Instead, we find a
-	continuity of leisure as the main theme, with swimming as the most prominent activity. In line
-	with the other regions, contemplativeness is a prevalent mood on the literary beaches of the
-	Black Atlantic, but it is the juxtaposition of melancholy and playfulness as well as happiness
-	which stands out most.</p>`
+					content: `<p>Upon starting this atlas, one of the primary objectives was to determine whether the perception of the beach as site of leisure and holiday had changed throughout the long twentieth century. Considering the growing awareness of global warming and climate change throughout this period, we were curious to see whether this was reflected in literature on the beach. While our findings indicate an increase in descriptions of polluted beaches, particularly from the 2000s onward, the overall number of texts explicitly mentioning pollution is relatively low and even when it does appear, it does not necessarily alter the mood of these scenes significantly. Interestingly, none of the texts in our Mediterranean sample explicitly refer to the pollution of littoral space.
+ This opens up interesting questions concerning the aesthetic and narrative effects of foregrounding or hiding pollution in literary representations. Furthermore, it suggests that despite a slight increase in the depiction of polluted beaches, the perception of the beach as a space of leisure remains largely unchanged.
+</p>`
 				},
 				{
 					name: 'regions',
@@ -74,8 +67,7 @@
 							value: 3
 						}
 					]
-				}
-				,
+				},
 				{
 					name: 'events',
 					label: 'Events',

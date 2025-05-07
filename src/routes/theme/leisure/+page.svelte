@@ -11,7 +11,7 @@
 	const leisureInfo: ModalSettings = {
 		type: 'component',
 		component: 'info',
-		title: 'Death',
+		title: 'Leisure',
 		meta: {
 			btnClasses:
 				'btn border bg-surface-900 text-primary-500 hover:bg-primary-500 hover:text-surface-900 hover:filter-none',
@@ -20,16 +20,7 @@
 				{
 					name: 'about',
 					label: 'About',
-					content: `<p>This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the Americas,
-	and the Caribbean. Here imagined as a geographical region, the Black Atlantic refers to a
-	concept coined by Paul Gilroy. Following Gilroy, the Black Atlantic has to be thought from a
-	transnational and intercultural perspective due to its colonial legacy and the transatlantic
-	slave trade. While this history is omnipresent in our chosen texts, it was surprising to find
-	that the expected themes of migration and death feature only rarely. Instead, we find a
-	continuity of leisure as the main theme, with swimming as the most prominent activity. In line
-	with the other regions, contemplativeness is a prevalent mood on the literary beaches of the
-	Black Atlantic, but it is the juxtaposition of melancholy and playfulness as well as happiness
-	which stands out most.</p>`
+					content: `<p>The association of the beach with leisure is a relatively recent phenomenon, which only gained traction in the last quarter of the nineteenth century, when the seaside became more widely accessible. Thus the transformation of the beach into a vacationscape is truly a development of the long twentieth century. This function of the beach has been extraordinarily influential, as shown in our corpus by the surprisingly uniform popularity of leisure as a theme. This suggests that at least in the Western imagination, the beach remains a quintessential holiday destination. As a vacationscape, the beach is a pleasure zone that combines closeness to nature with carefreeness, inspiring visions of departure from routine and the mundane. Leisure often involves play and the sensual experience of nature, but it also means being free for introspection and self-analysis. However, our corpus suggests that it frequently also leads to interpersonal conflict.</p>`
 				},
 				{
 					name: 'regions',
@@ -74,8 +65,7 @@
 							value: 18
 						}
 					]
-				}
-				,
+				},
 				{
 					name: 'events',
 					label: 'Events',

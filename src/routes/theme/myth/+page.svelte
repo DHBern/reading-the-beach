@@ -11,7 +11,7 @@
 	const mythInfo: ModalSettings = {
 		type: 'component',
 		component: 'info',
-		title: 'Death',
+		title: 'Myth',
 		meta: {
 			btnClasses:
 				'btn border bg-surface-900 text-primary-500 hover:bg-primary-500 hover:text-surface-900 hover:filter-none',
@@ -20,16 +20,7 @@
 				{
 					name: 'about',
 					label: 'About',
-					content: `<p>This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the Americas,
-	and the Caribbean. Here imagined as a geographical region, the Black Atlantic refers to a
-	concept coined by Paul Gilroy. Following Gilroy, the Black Atlantic has to be thought from a
-	transnational and intercultural perspective due to its colonial legacy and the transatlantic
-	slave trade. While this history is omnipresent in our chosen texts, it was surprising to find
-	that the expected themes of migration and death feature only rarely. Instead, we find a
-	continuity of leisure as the main theme, with swimming as the most prominent activity. In line
-	with the other regions, contemplativeness is a prevalent mood on the literary beaches of the
-	Black Atlantic, but it is the juxtaposition of melancholy and playfulness as well as happiness
-	which stands out most.</p>`
+					content: `<p>The category “Myth” includes a variety of aspects such as re-writings of classical myths and folklore as well as the appearance of mythological and fantastical creatures. In our selection of texts, we found that mermaids, selkies and other merfolk appear more in the Northern Seas and Black Atlantic regions, while the Mediterranean features more rewritings of classical myths. Between the 1950s and the 1990s, myth appears to have disappeared from the shores to resurface with full force in the 21st century. This gap could potentially be explained by the presence of more monstrous figures, e.g. gigantic reptilians, in aquatic settings expressing anxieties on nuclear threats during the mid-twentieth century. Since around the turn of the millennium, there has been a growing interest in rewritings of myth and folklore foregrounding the perspective of women.</p>`
 				},
 				{
 					name: 'regions',
@@ -82,8 +73,7 @@
 							value: 11
 						}
 					]
-				}
-				,
+				},
 				{
 					name: 'events',
 					label: 'Events',

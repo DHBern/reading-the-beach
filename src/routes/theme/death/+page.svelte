@@ -20,16 +20,7 @@
 				{
 					name: 'about',
 					label: 'About',
-					content: `<p>This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the Americas,
-	and the Caribbean. Here imagined as a geographical region, the Black Atlantic refers to a
-	concept coined by Paul Gilroy. Following Gilroy, the Black Atlantic has to be thought from a
-	transnational and intercultural perspective due to its colonial legacy and the transatlantic
-	slave trade. While this history is omnipresent in our chosen texts, it was surprising to find
-	that the expected themes of migration and death feature only rarely. Instead, we find a
-	continuity of leisure as the main theme, with swimming as the most prominent activity. In line
-	with the other regions, contemplativeness is a prevalent mood on the literary beaches of the
-	Black Atlantic, but it is the juxtaposition of melancholy and playfulness as well as happiness
-	which stands out most.</p>`
+					content: `<p>Death is a theme that features consistently in literary beach scenes throughout the long twentieth century, illustrating the dual role of the beach as both a site of relaxation and play as well as potential danger. Its transient nature, ideal for hiding traces and obscuring evidence, makes the beach a compelling setting for crime fiction and murder mysteries. The tides can pull people into the water and also wash death ashore, for example in the form of shipwrecked bodies and beached whales. This underscores the agential capacity of the beach in narratives, as well as its ability to foreground issues of increasing relevance, such as environmental degradation and pollution. As such, this theme highlights the function of the beach as a liminal setting where life, death and decay intersect.</p>`
 				},
 				{
 					name: 'regions',
@@ -74,8 +65,7 @@
 							value: 14
 						}
 					]
-				}
-				,
+				},
 				{
 					name: 'events',
 					label: 'Events',

@@ -11,7 +11,7 @@
 	const migrationInfo: ModalSettings = {
 		type: 'component',
 		component: 'info',
-		title: 'Death',
+		title: 'Migration & Exile',
 		meta: {
 			btnClasses:
 				'btn border bg-surface-900 text-primary-500 hover:bg-primary-500 hover:text-surface-900 hover:filter-none',
@@ -20,16 +20,7 @@
 				{
 					name: 'about',
 					label: 'About',
-					content: `<p>This is the Black Atlantic region. It encompasses a zone between Europe, Africa, the Americas,
-	and the Caribbean. Here imagined as a geographical region, the Black Atlantic refers to a
-	concept coined by Paul Gilroy. Following Gilroy, the Black Atlantic has to be thought from a
-	transnational and intercultural perspective due to its colonial legacy and the transatlantic
-	slave trade. While this history is omnipresent in our chosen texts, it was surprising to find
-	that the expected themes of migration and death feature only rarely. Instead, we find a
-	continuity of leisure as the main theme, with swimming as the most prominent activity. In line
-	with the other regions, contemplativeness is a prevalent mood on the literary beaches of the
-	Black Atlantic, but it is the juxtaposition of melancholy and playfulness as well as happiness
-	which stands out most.</p>`
+					content: `<p>The beach has long been associated with movement and travel. We were particularly interested in the different effects of voluntary (such as tourism) and involuntary (such as exile). Our original hypothesis was that migration and exile would feature prominently both earlier in the century, in literature written during WWII, and towards the end of the long twentieth century. However, in our corpus, migration and exile only begin to appear as relevant themes in the 1990s, with an (expected) peak related to the Mediterranean refugee crisis in contemporary texts written since 2010. Additionally, migration and exile play a role in the passage from water to land and vice-versa in merfolk literature. Often, aquatic and terrestrial environments are juxtaposed as opposite worlds, and the characters’ transition is usually final. The beach functions as an important threshold in these instances, since any crossing of the line between land and water is always both an arrival and a departure. A physical transformation frequently emphasises the potential painfulness of such an adaptation to a new environment.</p>`
 				},
 				{
 					name: 'regions',
@@ -74,8 +65,7 @@
 							value: 5
 						}
 					]
-				}
-				,
+				},
 				{
 					name: 'events',
 					label: 'Events',
