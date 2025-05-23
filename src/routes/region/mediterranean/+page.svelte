@@ -157,31 +157,31 @@
 			<dl class="my-2 flex gap-2 items-center flex-wrap lg:grid">
 				<div class="contents lg:flex gap-2 items-center">
 					<dt>
-						<enhanced:img src="$lib/icons/mediterranean/M_death.svg" alt="death icon" />
+						<enhanced:img src="$lib/icons/mediterranean/M_death.svg" class="max-w-[70%]" alt="death icon" />
 					</dt>
 					<dd class="mr-4">Death</dd>
 				</div>
 				<div class="contents lg:flex gap-2 items-center">
 					<dt>
-						<enhanced:img src="$lib/icons/mediterranean/M_leisure.svg" alt="leisure icon" />
+						<enhanced:img src="$lib/icons/mediterranean/M_leisure.svg" class="max-w-[70%]" alt="leisure icon" />
 					</dt>
 					<dd class="mr-4">Leisure</dd>
 				</div>
 				<div class="contents lg:flex gap-2 items-center">
 					<dt>
-						<enhanced:img src="$lib/icons/mediterranean/M_migration.svg" alt="migration icon" />
+						<enhanced:img src="$lib/icons/mediterranean/M_migration.svg" class="max-w-[70%]" alt="migration icon" />
 					</dt>
 					<dd class="mr-4">Migration</dd>
 				</div>
 				<div class="contents lg:flex gap-2 items-center">
 					<dt>
-						<enhanced:img src="$lib/icons/mediterranean/M_myth.svg" alt="myth icon" />
+						<enhanced:img src="$lib/icons/mediterranean/M_myth.svg" class="max-w-[70%]" alt="myth icon" />
 					</dt>
 					<dd class="mr-4">Myth</dd>
 				</div>
 				<div class="contents lg:flex gap-2 items-center">
 					<dt>
-						<enhanced:img src="$lib/icons/mediterranean/M_pollution.svg" alt="pollution icon" />
+						<enhanced:img src="$lib/icons/mediterranean/M_pollution.svg" class="max-w-[70%]" alt="pollution icon" />
 					</dt>
 					<dd class="mr-4">Pollution</dd>
 				</div>
