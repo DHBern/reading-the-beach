@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/795426670.svg)](https://doi.org/10.5281/zenodo.17611622)
+
 # Digital Shores: An Interactive Atlas of Beach Narratives
 
 This atlas visualises some of the results of our research into the function of the beach in (mainly) anglophone literature from the long twentieth century. It allows us to explore the beach not simply as a setting, but as an active element in literary texts. Littoral spaces, like shores, coasts, and beaches, enable unruliness, disturbance, and change.  Encounters involving social conflict, violence, death, romance, and sex are exceptionally pervasive on the literary beach, whether they happen between humans or between humans and the more-than-human world. So are experiences of new self-awareness, renewal, and rebirth. Find more Information [on the Project Website](https://readingthebeach.unibe.ch/?page_id=2173). This atlas was created as a part of our SNSF project on The Beach in the Long Twentieth Century (100012_192810 / 1). The Research Team consists of Guðrun í Jákupsstovu, Ursula Kluwick, Virginia Richter and Marion Troxler.
